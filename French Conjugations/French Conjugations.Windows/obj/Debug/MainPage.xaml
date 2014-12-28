@@ -1,0 +1,33 @@
+﻿<Page
+    x:Class="French_Conjugations.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:French_Conjugations"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+    <Page.DataContext>
+        <local:VerbViewModel/>
+    </Page.DataContext>
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="40"/>
+            <RowDefinition Height="14"/>
+            <RowDefinition Height="59"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <TextBox x:Name="textBox" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" TextWrapping="Wrap" Text="{Binding VerbInput, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" FontFamily="Global User Interface" Margin="0,0,10,0"/>
+        <Button x:Name="btnConj" Grid.Row="0" Grid.Column="2" Content="Conjugate" HorizontalAlignment="Stretch"  Command="{Binding ConjugateVerb}" FontFamily="Global User Interface" Margin="7,1,0,1"/>
+        <TextBlock x:Name="txtInput" Grid.Row="1" Grid.Column="0" HorizontalAlignment="Center" TextWrapping="Wrap" Text="{Binding Path=VerbCurrentTense}"/>
+        <TextBlock x:Name="txtInf" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Center" TextWrapping="Wrap" Text="{Binding VerbInfinitive}"/>
+        <TextBlock x:Name="txtSub" Grid.Row="1" Grid.Column="2" HorizontalAlignment="Center" TextWrapping="Wrap" Text="{Binding VerbSubject, UpdateSourceTrigger=Explicit}"/>
+        <TextBlock x:Name="txtFinal" Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="3" HorizontalAlignment="Center" VerticalAlignment="Top" FontSize="48" Text="{Binding VerbFinalForm}"/>
+        <ListBox x:Name="listTense" Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="3" VerticalAlignment="Top" FontSize="36" ItemsSource="{Binding Path=VerbListTense}" SelectedItem="{Binding Path=VerbCurrentTense, Mode=TwoWay}"/>
+    </Grid>
+</Page>
+

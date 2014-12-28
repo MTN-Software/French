@@ -1,0 +1,32 @@
+c:\users\thomas\documents\visual studio 2015\Projects\French Conjugations\French Conjugations\French Conjugations.Windows\bin\Debug\App.xbf
+c:\users\thomas\documents\visual studio 2015\Projects\French Conjugations\French Conjugations\French Conjugations.Windows\bin\Debug\MainPage.xbf
+c:\users\thomas\documents\visual studio 2015\Projects\French Conjugations\French Conjugations\French Conjugations.Windows\bin\Debug\French Conjugations.Windows.xr.xml
+c:\users\thomas\documents\visual studio 2015\Projects\French Conjugations\French Conjugations\French Conjugations.Windows\bin\Debug\French Conjugations.Windows.exe
+c:\users\thomas\documents\visual studio 2015\Projects\French Conjugations\French Conjugations\French Conjugations.Windows\bin\Debug\French Conjugations.Windows.pdb
+c:\users\thomas\documents\visual studio 2015\Projects\French Conjugations\French Conjugations\French Conjugations.Windows\bin\Debug\resources.pri
+c:\users\thomas\documents\visual studio 2015\Projects\French Conjugations\French Conjugations\French Conjugations.Windows\bin\Debug\AppxManifest.xml
+c:\users\thomas\documents\visual studio 2015\Projects\French Conjugations\French Conjugations\French Conjugations.Windows\bin\Debug\French Conjugations.Windows.build.appxrecipe
+c:\users\thomas\documents\visual studio 2015\Projects\French Conjugations\French Conjugations\French Conjugations.Windows\obj\Debug\App.g.i.cs
+c:\users\thomas\documents\visual studio 2015\Projects\French Conjugations\French Conjugations\French Conjugations.Windows\obj\Debug\App.g.cs
+c:\users\thomas\documents\visual studio 2015\Projects\French Conjugations\French Conjugations\French Conjugations.Windows\obj\Debug\MainPage.g.i.cs
+c:\users\thomas\documents\visual studio 2015\Projects\French Conjugations\French Conjugations\French Conjugations.Windows\obj\Debug\MainPage.g.cs
+c:\users\thomas\documents\visual studio 2015\Projects\French Conjugations\French Conjugations\French Conjugations.Windows\obj\Debug\XamlTypeInfo.g.cs
+c:\users\thomas\documents\visual studio 2015\Projects\French Conjugations\French Conjugations\French Conjugations.Windows\obj\Debug\App.xaml
+c:\users\thomas\documents\visual studio 2015\Projects\French Conjugations\French Conjugations\French Conjugations.Windows\obj\Debug\MainPage.xaml
+c:\users\thomas\documents\visual studio 2015\Projects\French Conjugations\French Conjugations\French Conjugations.Windows\obj\Debug\App.xbf
+c:\users\thomas\documents\visual studio 2015\Projects\French Conjugations\French Conjugations\French Conjugations.Windows\obj\Debug\MainPage.xbf
+c:\users\thomas\documents\visual studio 2015\Projects\French Conjugations\French Conjugations\French Conjugations.Windows\obj\Debug\XamlSaveStateFile.xml
+c:\users\thomas\documents\visual studio 2015\Projects\French Conjugations\French Conjugations\French Conjugations.Windows\obj\Debug\French Conjugations.Windows.exe
+c:\users\thomas\documents\visual studio 2015\Projects\French Conjugations\French Conjugations\French Conjugations.Windows\obj\Debug\French Conjugations.Windows.pdb
+c:\users\thomas\documents\visual studio 2015\Projects\French Conjugations\French Conjugations\French Conjugations.Windows\obj\Debug\priconfig.xml
+c:\users\thomas\documents\visual studio 2015\Projects\French Conjugations\French Conjugations\French Conjugations.Windows\obj\Debug\priconfig.xml.intermediate
+c:\users\thomas\documents\visual studio 2015\Projects\French Conjugations\French Conjugations\French Conjugations.Windows\obj\Debug\layout.resfiles
+c:\users\thomas\documents\visual studio 2015\Projects\French Conjugations\French Conjugations\French Conjugations.Windows\obj\Debug\layout.resfiles.intermediate
+c:\users\thomas\documents\visual studio 2015\Projects\French Conjugations\French Conjugations\French Conjugations.Windows\obj\Debug\resources.resfiles
+c:\users\thomas\documents\visual studio 2015\Projects\French Conjugations\French Conjugations\French Conjugations.Windows\obj\Debug\resources.resfiles.intermediate
+c:\users\thomas\documents\visual studio 2015\Projects\French Conjugations\French Conjugations\French Conjugations.Windows\obj\Debug\pri.resfiles
+c:\users\thomas\documents\visual studio 2015\Projects\French Conjugations\French Conjugations\French Conjugations.Windows\obj\Debug\pri.resfiles.intermediate
+c:\users\thomas\documents\visual studio 2015\Projects\French Conjugations\French Conjugations\French Conjugations.Windows\obj\Debug\qualifiers.txt
+c:\users\thomas\documents\visual studio 2015\Projects\French Conjugations\French Conjugations\French Conjugations.Windows\obj\Debug\qualifiers.txt.intermediate
+c:\users\thomas\documents\visual studio 2015\Projects\French Conjugations\French Conjugations\French Conjugations.Windows\obj\Debug\MultipleQualifiersPerDimensionFound.txt
+c:\users\thomas\documents\visual studio 2015\Projects\French Conjugations\French Conjugations\French Conjugations.Windows\obj\Debug\ProjectArchitectures.txt

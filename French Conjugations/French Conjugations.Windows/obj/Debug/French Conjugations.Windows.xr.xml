@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Roots xmlns="clr-namespace:Microsoft.Xaml.Tools.XamlCompiler.RootLog;assembly=Microsoft.Windows.UI.Xaml.81.Build.Tasks">
+  <Roots.PropertyPathNames>
+    <RootPropertyPathName Name="VerbListTense" />
+    <RootPropertyPathName Name="VerbCurrentTense" />
+    <RootPropertyPathName Name="VerbFinalForm" />
+    <RootPropertyPathName Name="VerbSubject" />
+    <RootPropertyPathName Name="VerbInfinitive" />
+    <RootPropertyPathName Name="ConjugateVerb" />
+    <RootPropertyPathName Name="VerbInput" />
+  </Roots.PropertyPathNames>
+  <Roots.RootTypes>
+    <RootType FullName="Windows.UI.Xaml.Application" />
+    <RootType FullName="Windows.UI.Xaml.Controls.Page">
+      <RootProperty Name="DataContext" />
+      <RootProperty Name="Content" />
+    </RootType>
+    <RootType FullName="French_Conjugations.VerbViewModel" />
+    <RootType FullName="Windows.UI.Xaml.Controls.Grid">
+      <RootProperty Name="Background" />
+      <RootProperty Name="RowDefinitions" />
+      <RootProperty Name="ColumnDefinitions" />
+      <RootProperty Name="Children" />
+      <RootMethod Name="GetRow" />
+      <RootMethod Name="SetRow" />
+      <RootMethod Name="GetColumn" />
+      <RootMethod Name="SetColumn" />
+      <RootMethod Name="GetColumnSpan" />
+      <RootMethod Name="SetColumnSpan" />
+    </RootType>
+    <RootType FullName="Microsoft.Xaml.Tools.DirectUI.ProxyTypes.ThemeResourceExtension" />
+    <RootType FullName="Windows.UI.Xaml.Controls.RowDefinition">
+      <RootProperty Name="Height" />
+    </RootType>
+    <RootType FullName="Windows.UI.Xaml.Controls.ColumnDefinition">
+      <RootProperty Name="Width" />
+    </RootType>
+    <RootType FullName="Windows.UI.Xaml.Controls.TextBox">
+      <RootProperty Name="TextWrapping" />
+      <RootProperty Name="Text" />
+      <RootProperty Name="FontFamily" />
+      <RootProperty Name="Margin" />
+    </RootType>
+    <RootType FullName="Windows.UI.Xaml.Controls.Button">
+      <RootProperty Name="Content" />
+      <RootProperty Name="HorizontalAlignment" />
+      <RootProperty Name="Command" />
+      <RootProperty Name="FontFamily" />
+      <RootProperty Name="Margin" />
+    </RootType>
+    <RootType FullName="Windows.UI.Xaml.Controls.TextBlock">
+      <RootProperty Name="HorizontalAlignment" />
+      <RootProperty Name="TextWrapping" />
+      <RootProperty Name="Text" />
+      <RootProperty Name="VerticalAlignment" />
+      <RootProperty Name="FontSize" />
+    </RootType>
+    <RootType FullName="Windows.UI.Xaml.Controls.ListBox">
+      <RootProperty Name="VerticalAlignment" />
+      <RootProperty Name="FontSize" />
+      <RootProperty Name="ItemsSource" />
+      <RootProperty Name="SelectedItem" />
+    </RootType>
+    <RootType FullName="Windows.UI.Xaml.Data.Binding">
+      <RootProperty Name="Path" />
+      <RootProperty Name="Mode" />
+      <RootProperty Name="UpdateSourceTrigger" />
+    </RootType>
+    <RootType FullName="French_Conjugations.MainPage" />
+  </Roots.RootTypes>
+</Roots>

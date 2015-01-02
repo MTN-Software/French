@@ -14,7 +14,7 @@ namespace French_Conjugations
         string _infinitive;
         string _subject;
         string _input;      // combination of infinitive and subject
-
+        int _tense;         // this will break if touched
         readonly string[] _listTense =
         { "Present", "Passé composé", "Imperfect",
             "Futur Proche", "Futur Simple", "Conditional" };

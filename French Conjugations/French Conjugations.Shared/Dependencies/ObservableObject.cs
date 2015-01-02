@@ -43,11 +43,13 @@ namespace French_Conjugations
         {
             // Verify that the property name matches a real,
             // public, instance property on this Object
-
+            //Debug.WriteLineIf(TypeDescriptor.GetProperties(this)[propertyName] == null, "Invalid property name: " + propertyName);
+            /*
             if (TypeDescriptor.GetProperties(this)[propertyName] == null)
             {
                 Debug.Fail("Invalid property name: " + propertyName);
             }
+            */
         }
     }
 }

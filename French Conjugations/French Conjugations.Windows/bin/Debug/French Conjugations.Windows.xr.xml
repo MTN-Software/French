@@ -1,10 +1,11 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Roots xmlns="clr-namespace:Microsoft.Xaml.Tools.XamlCompiler.RootLog;assembly=Microsoft.Windows.UI.Xaml.81.Build.Tasks">
   <Roots.PropertyPathNames>
+    <RootPropertyPathName Name="VerbListTense" />
+    <RootPropertyPathName Name="VerbCurrentTense" />
     <RootPropertyPathName Name="VerbFinalForm" />
     <RootPropertyPathName Name="VerbSubject" />
     <RootPropertyPathName Name="VerbInfinitive" />
-    <RootPropertyPathName Name="VerbCurrentTense" />
     <RootPropertyPathName Name="ConjugateVerb" />
     <RootPropertyPathName Name="VerbInput" />
   </Roots.PropertyPathNames>
@@ -54,10 +55,16 @@
       <RootProperty Name="VerticalAlignment" />
       <RootProperty Name="FontSize" />
     </RootType>
+    <RootType FullName="Windows.UI.Xaml.Controls.ListBox">
+      <RootProperty Name="VerticalAlignment" />
+      <RootProperty Name="FontSize" />
+      <RootProperty Name="ItemsSource" />
+      <RootProperty Name="SelectedItem" />
+    </RootType>
     <RootType FullName="Windows.UI.Xaml.Data.Binding">
-      <RootProperty Name="UpdateSourceTrigger" />
       <RootProperty Name="Path" />
       <RootProperty Name="Mode" />
+      <RootProperty Name="UpdateSourceTrigger" />
     </RootType>
     <RootType FullName="French_Conjugations.MainPage" />
   </Roots.RootTypes>

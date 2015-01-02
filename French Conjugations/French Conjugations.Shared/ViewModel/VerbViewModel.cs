@@ -406,7 +406,6 @@ namespace French_Conjugations
         void UpdateVerbTenseExecute()
         {
             VerbTense = _verb.VerbTense;
-            VerbCurrentTense = _verb.VerbCurrentTense;
         }
 
         // All this does now is update the properties

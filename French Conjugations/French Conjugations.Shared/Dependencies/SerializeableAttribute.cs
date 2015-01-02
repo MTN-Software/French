@@ -9,13 +9,13 @@ namespace French_Conjugations
     [ComVisible(true)]
     public sealed class SerializableAttribute : Attribute
     {
-        public SerializableAttribute();
+        public SerializableAttribute() { }
     }
 
     [AttributeUsage(AttributeTargets.Field, Inherited = false)]
     [ComVisible(true)]
     public sealed class NonSerializedAttribute : Attribute
     {
-        public NonSerializedAttribute();
+        public NonSerializedAttribute() { }
     }
 }

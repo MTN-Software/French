@@ -1,1 +1,1 @@
-C:\Users\Thomas\documents\visual studio 2015\Projects\French Conjugations\French Conjugations\French Conjugations.Windows\French Conjugations.Windows.csproj;neutral
+C:\Users\Thomas\Source\Repos\French\French Conjugations\French Conjugations.Windows\French Conjugations.Windows.csproj;neutral

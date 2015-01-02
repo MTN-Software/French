@@ -1,13 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Collections;
-using System.ComponentModel.Design;
 using System.Reflection;
 using System.ComponentModel;
-
+using System.ComponentModel;
 namespace French_Conjugations
 {
     public sealed class TypeDescriptor
@@ -1143,8 +1138,11 @@ namespace French_Conjugations
         // Exceptions:
         //   T:System.ArgumentNullException:
         //     infos is null.
-        public static void SortDescriptorArray(IList infos);
+        public static void SortDescriptorArray(IList infos) { }
 
+        public interface IComNativeDescriptorHandler
+        {
+        }
     }
 
     //
@@ -1159,7 +1157,7 @@ namespace French_Conjugations
         //     Initializes a new instance of the System.ComponentModel.EditorBrowsableAttribute
         //     class with System.ComponentModel.EditorBrowsableAttribute.State set to the default
         //     state.
-        public EditorBrowsableAttribute();
+        public EditorBrowsableAttribute() { base.MemberwiseClone(); }
         //
         // Summary:
         //     Initializes a new instance of the System.ComponentModel.EditorBrowsableAttribute
@@ -1169,7 +1167,7 @@ namespace French_Conjugations
         //   state:
         //     The System.ComponentModel.EditorBrowsableState to set System.ComponentModel.EditorBrowsableAttribute.State
         //     to.
-        public EditorBrowsableAttribute(EditorBrowsableState state);
+        public EditorBrowsableAttribute(EditorBrowsableState state) { base.MemberwiseClone(); }
 
         //
         // Summary:
@@ -1191,8 +1189,173 @@ namespace French_Conjugations
         // Returns:
         //     true if the value of the given object is equal to that of the current; otherwise,
         //     false.
-        public override bool Equals(object obj);
-        public override int GetHashCode();
+        public override bool Equals(object obj) { return base.Equals(obj); }
+        public override int GetHashCode() { return base.GetHashCode(); }
+    }
+
+    //
+    // Summary:
+    //     Provides a top-level mapping layer between a COM object and a System.ComponentModel.TypeDescriptor.
+    [Obsolete("This interface has been deprecated. Add a TypeDescriptionProvider to handle type TypeDescriptor.ComObjectType instead.  http://go.microsoft.com/fwlink/?linkid=14202")]
+    public interface IComNativeDescriptorHandler
+    {
+        //
+        // Summary:
+        //     Gets the attributes for the specified component.
+        //
+        // Parameters:
+        //   component:
+        //     The component to get attributes for.
+        //
+        // Returns:
+        //     A collection of attributes for component.
+        AttributeCollection GetAttributes(object component);
+        //
+        // Summary:
+        //     Gets the class name for the specified component.
+        //
+        // Parameters:
+        //   component:
+        //     The component to get the class name for.
+        //
+        // Returns:
+        //     The name of the class that corresponds with component.
+        string GetClassName(object component);
+        //
+        // Summary:
+        //     Gets the type converter for the specified component.
+        //
+        // Parameters:
+        //   component:
+        //     The component to get the System.ComponentModel.TypeConverter for.
+        //
+        // Returns:
+        //     The System.ComponentModel.TypeConverter for component.
+        TypeConverter GetConverter(object component);
+        //
+        // Summary:
+        //     Gets the default event for the specified component.
+        //
+        // Parameters:
+        //   component:
+        //     The component to get the default event for.
+        //
+        // Returns:
+        //     An System.ComponentModel.EventDescriptor that represents component's default
+        //     event.
+        EventDescriptor GetDefaultEvent(object component);
+        //
+        // Summary:
+        //     Gets the default property for the specified component.
+        //
+        // Parameters:
+        //   component:
+        //     The component to get the default property for.
+        //
+        // Returns:
+        //     A System.ComponentModel.PropertyDescriptor that represents component's default
+        //     property.
+        PropertyDescriptor GetDefaultProperty(object component);
+        //
+        // Summary:
+        //     Gets the editor for the specified component.
+        //
+        // Parameters:
+        //   component:
+        //     The component to get the editor for.
+        //
+        //   baseEditorType:
+        //     The base type of the editor for component.
+        //
+        // Returns:
+        //     The editor for component.
+        object GetEditor(object component, Type baseEditorType);
+        //
+        // Summary:
+        //     Gets the events for the specified component.
+        //
+        // Parameters:
+        //   component:
+        //     The component to get events for.
+        //
+        // Returns:
+        //     A collection of event descriptors for component.
+        EventDescriptorCollection GetEvents(object component);
+        //
+        // Summary:
+        //     Gets the events with the specified attributes for the specified component.
+        //
+        // Parameters:
+        //   component:
+        //     The component to get events for.
+        //
+        //   attributes:
+        //     The attributes used to filter events.
+        //
+        // Returns:
+        //     A collection of event descriptors for component.
+        EventDescriptorCollection GetEvents(object component, Attribute[] attributes);
+        //
+        // Summary:
+        //     Gets the name of the specified component.
+        //
+        // Parameters:
+        //   component:
+        //     The component to get the name of.
+        //
+        // Returns:
+        //     The name of component.
+        string GetName(object component);
+        //
+        // Summary:
+        //     Gets the properties with the specified attributes for the specified component.
+        //
+        // Parameters:
+        //   component:
+        //     The component to get events for.
+        //
+        //   attributes:
+        //     The attributes used to filter properties.
+        //
+        // Returns:
+        //     A collection of property descriptors for component.
+        PropertyDescriptorCollection GetProperties(object component, Attribute[] attributes);
+        //
+        // Summary:
+        //     Gets the value of the property that has the specified dispatch identifier.
+        //
+        // Parameters:
+        //   component:
+        //     The object to which the property belongs.
+        //
+        //   dispid:
+        //     The dispatch identifier.
+        //
+        //   success:
+        //     A System.Boolean, passed by reference, that represents whether the property was
+        //     retrieved.
+        //
+        // Returns:
+        //     The value of the property that has the specified dispatch identifier.
+        object GetPropertyValue(object component, int dispid, ref bool success);
+        //
+        // Summary:
+        //     Gets the value of the property that has the specified name.
+        //
+        // Parameters:
+        //   component:
+        //     The object to which the property belongs.
+        //
+        //   propertyName:
+        //     The name of the property.
+        //
+        //   success:
+        //     A System.Boolean, passed by reference, that represents whether the property was
+        //     retrieved.
+        //
+        // Returns:
+        //     The value of the property that has the specified name.
+        object GetPropertyValue(object component, string propertyName, ref bool success);
     }
 
 }

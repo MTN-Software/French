@@ -42,3 +42,23 @@ C:\Users\Thomas\Source\Repos\French\French Conjugations\French Conjugations.Wind
 C:\Users\Thomas\Source\Repos\French\French Conjugations\French Conjugations.Windows\obj\Debug\XamlSaveStateFile.xml
 C:\Users\Thomas\Source\Repos\French\French Conjugations\French Conjugations.Windows\obj\Debug\French Conjugations.Windows.exe
 C:\Users\Thomas\Source\Repos\French\French Conjugations\French Conjugations.Windows\obj\Debug\French Conjugations.Windows.pdb
+C:\Users\Thomas\Source\Repos\French\French Conjugations\French Conjugations.Windows\bin\Debug\App.xbf
+C:\Users\Thomas\Source\Repos\French\French Conjugations\French Conjugations.Windows\bin\Debug\MainPage.xbf
+C:\Users\Thomas\Source\Repos\French\French Conjugations\French Conjugations.Windows\bin\Debug\French Conjugations.Windows.xr.xml
+C:\Users\Thomas\Source\Repos\French\French Conjugations\French Conjugations.Windows\bin\Debug\French Conjugations.Windows.exe
+C:\Users\Thomas\Source\Repos\French\French Conjugations\French Conjugations.Windows\bin\Debug\French Conjugations.Windows.pdb
+C:\Users\Thomas\Source\Repos\French\French Conjugations\French Conjugations.Windows\bin\Debug\resources.pri
+C:\Users\Thomas\Source\Repos\French\French Conjugations\French Conjugations.Windows\bin\Debug\AppxManifest.xml
+C:\Users\Thomas\Source\Repos\French\French Conjugations\French Conjugations.Windows\bin\Debug\French Conjugations.Windows.build.appxrecipe
+C:\Users\Thomas\Source\Repos\French\French Conjugations\French Conjugations.Windows\obj\Debug\priconfig.xml
+C:\Users\Thomas\Source\Repos\French\French Conjugations\French Conjugations.Windows\obj\Debug\priconfig.xml.intermediate
+C:\Users\Thomas\Source\Repos\French\French Conjugations\French Conjugations.Windows\obj\Debug\layout.resfiles
+C:\Users\Thomas\Source\Repos\French\French Conjugations\French Conjugations.Windows\obj\Debug\layout.resfiles.intermediate
+C:\Users\Thomas\Source\Repos\French\French Conjugations\French Conjugations.Windows\obj\Debug\resources.resfiles
+C:\Users\Thomas\Source\Repos\French\French Conjugations\French Conjugations.Windows\obj\Debug\resources.resfiles.intermediate
+C:\Users\Thomas\Source\Repos\French\French Conjugations\French Conjugations.Windows\obj\Debug\pri.resfiles
+C:\Users\Thomas\Source\Repos\French\French Conjugations\French Conjugations.Windows\obj\Debug\pri.resfiles.intermediate
+C:\Users\Thomas\Source\Repos\French\French Conjugations\French Conjugations.Windows\obj\Debug\qualifiers.txt
+C:\Users\Thomas\Source\Repos\French\French Conjugations\French Conjugations.Windows\obj\Debug\qualifiers.txt.intermediate
+C:\Users\Thomas\Source\Repos\French\French Conjugations\French Conjugations.Windows\obj\Debug\MultipleQualifiersPerDimensionFound.txt
+C:\Users\Thomas\Source\Repos\French\French Conjugations\French Conjugations.Windows\obj\Debug\ProjectArchitectures.txt

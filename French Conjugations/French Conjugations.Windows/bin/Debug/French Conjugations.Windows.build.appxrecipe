@@ -7,44 +7,44 @@
     <SolutionConfiguration>Debug|AnyCPU</SolutionConfiguration>
     <PackageArchitecture>neutral</PackageArchitecture>
     <PackageIdentityName>eebd510d-c508-4696-87bc-2d28449ec465</PackageIdentityName>
-    <IntermediateOutputPath>C:\Users\Thomas\documents\visual studio 2015\Projects\French Conjugations\French Conjugations\French Conjugations.Windows\obj\Debug\</IntermediateOutputPath>
+    <IntermediateOutputPath>C:\Users\Thomas\Source\Repos\French\French Conjugations\French Conjugations.Windows\obj\Debug\</IntermediateOutputPath>
   </PropertyGroup>
   <ItemGroup>
-    <AppXManifest Include="C:\Users\Thomas\documents\visual studio 2015\Projects\French Conjugations\French Conjugations\French Conjugations.Windows\bin\Debug\AppxManifest.xml">
+    <AppXManifest Include="C:\Users\Thomas\Source\Repos\French\French Conjugations\French Conjugations.Windows\bin\Debug\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
-    <AppxPackagedFile Include="C:\Users\Thomas\documents\visual studio 2015\Projects\French Conjugations\French Conjugations\French Conjugations.Windows\bin\Debug\French Conjugations.Windows.exe">
+    <AppxPackagedFile Include="C:\Users\Thomas\Source\Repos\French\French Conjugations\French Conjugations.Windows\bin\Debug\French Conjugations.Windows.exe">
       <PackagePath>French Conjugations.Windows.exe</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Thomas\documents\visual studio 2015\Projects\French Conjugations\French Conjugations\French Conjugations.Windows\Assets\Logo.scale-100.png">
+    <AppxPackagedFile Include="C:\Users\Thomas\Source\Repos\French\French Conjugations\French Conjugations.Windows\Assets\Logo.scale-100.png">
       <PackagePath>Assets\Logo.scale-100.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Thomas\documents\visual studio 2015\Projects\French Conjugations\French Conjugations\French Conjugations.Windows\Assets\SmallLogo.scale-100.png">
+    <AppxPackagedFile Include="C:\Users\Thomas\Source\Repos\French\French Conjugations\French Conjugations.Windows\Assets\SmallLogo.scale-100.png">
       <PackagePath>Assets\SmallLogo.scale-100.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Thomas\documents\visual studio 2015\Projects\French Conjugations\French Conjugations\French Conjugations.Windows\Assets\SplashScreen.scale-100.png">
+    <AppxPackagedFile Include="C:\Users\Thomas\Source\Repos\French\French Conjugations\French Conjugations.Windows\Assets\SplashScreen.scale-100.png">
       <PackagePath>Assets\SplashScreen.scale-100.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Thomas\documents\visual studio 2015\Projects\French Conjugations\French Conjugations\French Conjugations.Windows\Assets\StoreLogo.scale-100.png">
+    <AppxPackagedFile Include="C:\Users\Thomas\Source\Repos\French\French Conjugations\French Conjugations.Windows\Assets\StoreLogo.scale-100.png">
       <PackagePath>Assets\StoreLogo.scale-100.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Thomas\documents\visual studio 2015\Projects\French Conjugations\French Conjugations\French Conjugations.Windows\bin\Debug\App.xbf">
+    <AppxPackagedFile Include="C:\Users\Thomas\Source\Repos\French\French Conjugations\French Conjugations.Windows\bin\Debug\App.xbf">
       <PackagePath>App.xbf</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Thomas\documents\visual studio 2015\Projects\French Conjugations\French Conjugations\French Conjugations.Windows\bin\Debug\MainPage.xbf">
+    <AppxPackagedFile Include="C:\Users\Thomas\Source\Repos\French\French Conjugations\French Conjugations.Windows\bin\Debug\MainPage.xbf">
       <PackagePath>MainPage.xbf</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Thomas\documents\visual studio 2015\Projects\French Conjugations\French Conjugations\French Conjugations.Windows\bin\Debug\French Conjugations.Windows.xr.xml">
+    <AppxPackagedFile Include="C:\Users\Thomas\Source\Repos\French\French Conjugations\French Conjugations.Windows\bin\Debug\French Conjugations.Windows.xr.xml">
       <PackagePath>French Conjugations.Windows.xr.xml</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Thomas\documents\visual studio 2015\Projects\French Conjugations\French Conjugations\French Conjugations.Windows\bin\Debug\resources.pri">
+    <AppxPackagedFile Include="C:\Users\Thomas\Source\Repos\French\French Conjugations\French Conjugations.Windows\bin\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
     </AppxPackagedFile>
   </ItemGroup>

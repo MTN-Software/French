@@ -2,7 +2,7 @@
 using System.Linq.Expressions;
 using System.Reflection;
 
-namespace MVVM_List
+namespace French_Conjugations
 {
     public static class PropertySupport
     {

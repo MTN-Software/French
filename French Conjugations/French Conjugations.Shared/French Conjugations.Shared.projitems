@@ -15,11 +15,14 @@
     <Compile Include="$(MSBuildThisFileDirectory)App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
-    <Compile Include="$(MSBuildThisFileDirectory)CommandManager.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)RelayCommand.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)RoutedEvent.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)RoutingStrategy.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Verb.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)VerbViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Dependencies\CommandManager.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Dependencies\ObservableObject.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Dependencies\PropertySupport.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Dependencies\RelayCommand.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Dependencies\RoutedEvent.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Dependencies\RoutingStrategy.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Dependencies\SerializeableAttribute.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Model\Verb.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModel\VerbViewModel.cs" />
   </ItemGroup>
 </Project>

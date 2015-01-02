@@ -3,7 +3,8 @@ using System.ComponentModel;
 using System.Diagnostics;
 using System.Linq.Expressions;
 
-namespace MVVM_List
+
+namespace French_Conjugations
 {
     [Serializable]
     public abstract class ObservableObject : INotifyPropertyChanged
@@ -42,6 +43,7 @@ namespace MVVM_List
         {
             // Verify that the property name matches a real,
             // public, instance property on this Object
+
             if (TypeDescriptor.GetProperties(this)[propertyName] == null)
             {
                 Debug.Fail("Invalid property name: " + propertyName);

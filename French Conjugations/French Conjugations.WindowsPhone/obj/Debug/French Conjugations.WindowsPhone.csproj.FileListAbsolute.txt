@@ -43,3 +43,15 @@ c:\users\thomas\documents\visual studio 2015\Projects\French Conjugations\French
 c:\users\thomas\documents\visual studio 2015\Projects\French Conjugations\French Conjugations\French Conjugations.WindowsPhone\obj\Debug\ilc\in\MainPage.xbf
 c:\users\thomas\documents\visual studio 2015\Projects\French Conjugations\French Conjugations\French Conjugations.WindowsPhone\obj\Debug\ilc\in\French Conjugations.WindowsPhone.xr.xml
 c:\users\thomas\documents\visual studio 2015\Projects\French Conjugations\French Conjugations\French Conjugations.WindowsPhone\obj\Debug\ilc\in\resources.pri
+C:\Users\Thomas\Source\Repos\French\French Conjugations\French Conjugations.WindowsPhone\obj\Debug\App.g.i.cs
+C:\Users\Thomas\Source\Repos\French\French Conjugations\French Conjugations.WindowsPhone\obj\Debug\App.g.cs
+C:\Users\Thomas\Source\Repos\French\French Conjugations\French Conjugations.WindowsPhone\obj\Debug\MainPage.g.i.cs
+C:\Users\Thomas\Source\Repos\French\French Conjugations\French Conjugations.WindowsPhone\obj\Debug\MainPage.g.cs
+C:\Users\Thomas\Source\Repos\French\French Conjugations\French Conjugations.WindowsPhone\obj\Debug\XamlTypeInfo.g.cs
+C:\Users\Thomas\Source\Repos\French\French Conjugations\French Conjugations.WindowsPhone\obj\Debug\App.xaml
+C:\Users\Thomas\Source\Repos\French\French Conjugations\French Conjugations.WindowsPhone\obj\Debug\MainPage.xaml
+C:\Users\Thomas\Source\Repos\French\French Conjugations\French Conjugations.WindowsPhone\obj\Debug\App.xbf
+C:\Users\Thomas\Source\Repos\French\French Conjugations\French Conjugations.WindowsPhone\obj\Debug\MainPage.xbf
+C:\Users\Thomas\Source\Repos\French\French Conjugations\French Conjugations.WindowsPhone\obj\Debug\XamlSaveStateFile.xml
+C:\Users\Thomas\Source\Repos\French\French Conjugations\French Conjugations.WindowsPhone\obj\Debug\French Conjugations.WindowsPhone.exe
+C:\Users\Thomas\Source\Repos\French\French Conjugations\French Conjugations.WindowsPhone\obj\Debug\French Conjugations.WindowsPhone.pdb

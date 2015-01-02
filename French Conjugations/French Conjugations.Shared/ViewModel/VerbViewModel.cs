@@ -6,7 +6,6 @@ using System.ComponentModel;
 using System.Windows.Input;
 using System.Threading.Tasks;
 
-
 namespace French_Conjugations
 {
     public class VerbViewModel : ObservableObject
@@ -19,19 +18,25 @@ namespace French_Conjugations
         {
             _verb = new Verb { VerbInfinitive = "Verb", VerbSubject = "Enter",
                 VerbInput = "Enter Verb", VerbEnding = "unknown",
-                VerbFinalForm = "unkown", VerbTense = 0,
+                VerbFinalForm = "unkown"
                 };
 
-            for (int i = 0; i < 4; i++)
+            _sTenses = new List<string>();
+            for (int i = 0; i < 6; i++)
             {
-                //_verb.VerbCurrentTense.Add(i);
+                _sTenses.Add( _database[i]);
             }
         }
         #endregion
 
         #region Members
         Verb _verb;
-        int _tense = 0;
+        //int _tense = 0;
+        List<string> _sTenses;
+        private TenseDatabase _database = new TenseDatabase();
+        ObservableCollection<TenseViewModel> _tenses = new ObservableCollection<TenseViewModel>();
+        TenseViewModel _currentTense;
+        string _selectedTense;
         #endregion
 
         #region Properties
@@ -97,39 +102,6 @@ namespace French_Conjugations
         }
 
 
-        public int VerbTense
-        {
-            get { return Verb.VerbTense; }
-            set
-            {
-                try
-                {
-                    // TODO: Add verb tense logic
-                    RaisePropertyChanged("VerbTense");
-                }
-                catch (Exception ex)
-                {
-                    RaisePropertyChanged("VerbTense");
-                }
-            }
-        }
-
-        public string[] VerbListTense
-        {
-            get { return Verb.VerbTenseArray; }
-            set
-            {
-                try
-                {
-                    RaisePropertyChanged("VerbListTense");
-                }
-                catch (Exception ex)
-                {
-                    RaisePropertyChanged("VerbListTense");
-                }
-            }
-        }
-
         public string VerbFinalForm
         {
             get { return Verb.VerbFinalForm; }
@@ -142,27 +114,27 @@ namespace French_Conjugations
                     string helping = string.Empty;
                     string append = string.Empty;
                     string carryOutVerb = string.Empty;
-
-                    switch (Verb.VerbTense)
+                    
+                    switch (SelectTense)
                     {
-                        case 0:
+                        case "Present":
                             append = PresentConj(append);
                             break;
-                        case 1:
+                        case "Passé composé":
                             append = PasseConj(append);
                             break;
-                        case 2:
+                        case "Imperfect":
                             append = ImperfectConj(append);
                             break;
-                        case 3:
+                        case "Futur Proche":
                             helping = ProcheConj(append);
                             root = Verb.VerbInfinitive;
                             append = string.Empty;
                             break;
-                        case 4:
+                        case "Futur Simple":
                             append = FuturSimpleConj(append);
                             break;
-                        case 5:
+                        case "Conditional":
                             append = ConditionalConj(append);
                             break;
                         default:
@@ -203,6 +175,41 @@ namespace French_Conjugations
             }
         }
 
+        public ObservableCollection<TenseViewModel> Tenses
+        {
+            get { return _tenses; }
+            set { _tenses = value; }
+        }
+        
+        public List<string> VerbTenses
+        {
+            get { return _sTenses; }
+        }
+        public TenseViewModel SelectedTense
+        {
+            get { return _currentTense; }
+            set
+            {
+                if (_currentTense != value)
+                {
+                    _currentTense = value;
+                    RaisePropertyChanged("SelectedTense");
+                }
+            }
+        }
+
+        public string SelectTense
+        {
+            get { return _selectedTense; }
+            set
+            {
+                if (_selectedTense != value)
+                {
+                    _selectedTense = value;
+                    RaisePropertyChanged("SelectTense");
+                }
+            }
+        }
         #endregion
 
         #region Methods
@@ -403,10 +410,6 @@ namespace French_Conjugations
             VerbFinalForm = string.Format("{0}", _verb.VerbFinalForm);
         }
 
-        void UpdateVerbTenseExecute()
-        {
-            VerbTense = _verb.VerbTense;
-        }
 
         // All this does now is update the properties
         void ConjugateVerbExecute()
@@ -415,10 +418,15 @@ namespace French_Conjugations
             UpdateVerbSubjectExecute();
             UpdateVerbInputExecute();
             UpdateVerbEndingExecute();
-            UpdateVerbTenseExecute();
             CalcVerbEnding(Verb);
             UpdateVerbFinalFormExecute();
         }
+
+        void UpdateSelectedTenseExecute()
+        {
+            SelectedTense = _currentTense;
+        }
+
         #endregion
         #region CanExecute
         bool CanUpdateVerbSubjectExecute()
@@ -455,6 +463,11 @@ namespace French_Conjugations
         {
             return true;
         }
+
+        bool CanUpdateSelectedTenseExecute()
+        {
+            return true;
+        }
         #endregion
         #region ICommands
         public ICommand UpdateVerbSubject { get { return new RelayCommand(UpdateVerbSubjectExecute, CanUpdateVerbSubjectExecute); } }
@@ -462,8 +475,8 @@ namespace French_Conjugations
         public ICommand UpdateVerbInput { get { return new RelayCommand(UpdateVerbInputExecute, CanUpdateVerbInputExecute); } }
         public ICommand UpdateVerbEnding { get { return new RelayCommand(UpdateVerbEndingExecute, CanUpdateVerbEndingExecute); } }
         public ICommand UpdateVerbFinalForm { get { return new RelayCommand(UpdateVerbFinalFormExecute, CanUpdateVerbFinalFormExecute); } }
-        public ICommand UpdateVerbTense { get { return new RelayCommand(UpdateVerbTenseExecute, CanUpdateVerbTenseExecute); } }
         public ICommand ConjugateVerb { get { return new RelayCommand(ConjugateVerbExecute, CanConjugateVerbExecute); } }
+        public ICommand UpdateSelectedTense { get { return new RelayCommand(UpdateSelectedTenseExecute, CanUpdateSelectedTenseExecute); } }
         #endregion
         #endregion
     }

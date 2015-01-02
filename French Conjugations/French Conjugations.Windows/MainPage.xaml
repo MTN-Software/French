@@ -27,6 +27,6 @@
         <TextBlock x:Name="txtInf" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Center" TextWrapping="Wrap" Text="{Binding VerbInfinitive}"/>
         <TextBlock x:Name="txtSub" Grid.Row="1" Grid.Column="2" HorizontalAlignment="Center" TextWrapping="Wrap" Text="{Binding VerbSubject, UpdateSourceTrigger=Explicit}"/>
         <TextBlock x:Name="txtFinal" Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="3" HorizontalAlignment="Center" VerticalAlignment="Top" FontSize="48" Text="{Binding VerbFinalForm}"/>
-        <ListBox x:Name="listTense" Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="3" VerticalAlignment="Top" FontSize="36" ItemsSource="{Binding Path=VerbListTense}" SelectedItem="{Binding Path=VerbCurrentTense, Mode=TwoWay}"/>
+        <ListBox x:Name="listTense" Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="3" VerticalAlignment="Top" FontSize="36" Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" Foreground="{ThemeResource ApplicationForegroundThemeBrush}" ItemsSource="{Binding Path=VerbTenses}" SelectedItem="{Binding Path=SelectTense, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
     </Grid>
 </Page>

@@ -124,33 +124,41 @@ namespace French_Conjugations.French_Conjugations_Windows_XamlTypeInfo
 
         private void InitTypeTables()
         {
-            _typeNameTable = new string[12];
+            _typeNameTable = new string[16];
             _typeNameTable[0] = "French_Conjugations.VerbViewModel";
             _typeNameTable[1] = "French_Conjugations.ObservableObject";
             _typeNameTable[2] = "Object";
             _typeNameTable[3] = "French_Conjugations.Verb";
             _typeNameTable[4] = "String";
-            _typeNameTable[5] = "Int32";
-            _typeNameTable[6] = "String[]";
-            _typeNameTable[7] = "System.Array";
-            _typeNameTable[8] = "System.Windows.Input.ICommand";
-            _typeNameTable[9] = "French_Conjugations.MainPage";
-            _typeNameTable[10] = "Windows.UI.Xaml.Controls.Page";
-            _typeNameTable[11] = "Windows.UI.Xaml.Controls.UserControl";
+            _typeNameTable[5] = "System.Collections.ObjectModel.ObservableCollection`1<French_Conjugations.TenseViewModel>";
+            _typeNameTable[6] = "System.Collections.ObjectModel.Collection`1<French_Conjugations.TenseViewModel>";
+            _typeNameTable[7] = "French_Conjugations.TenseViewModel";
+            _typeNameTable[8] = "String[]";
+            _typeNameTable[9] = "System.Array";
+            _typeNameTable[10] = "French_Conjugations.TenseDatabase";
+            _typeNameTable[11] = "System.Collections.Generic.List`1<String>";
+            _typeNameTable[12] = "System.Windows.Input.ICommand";
+            _typeNameTable[13] = "French_Conjugations.MainPage";
+            _typeNameTable[14] = "Windows.UI.Xaml.Controls.Page";
+            _typeNameTable[15] = "Windows.UI.Xaml.Controls.UserControl";
 
-            _typeTable = new global::System.Type[12];
+            _typeTable = new global::System.Type[16];
             _typeTable[0] = typeof(global::French_Conjugations.VerbViewModel);
             _typeTable[1] = typeof(global::French_Conjugations.ObservableObject);
             _typeTable[2] = typeof(global::System.Object);
             _typeTable[3] = typeof(global::French_Conjugations.Verb);
             _typeTable[4] = typeof(global::System.String);
-            _typeTable[5] = typeof(global::System.Int32);
-            _typeTable[6] = typeof(global::System.String[]);
-            _typeTable[7] = typeof(global::System.Array);
-            _typeTable[8] = typeof(global::System.Windows.Input.ICommand);
-            _typeTable[9] = typeof(global::French_Conjugations.MainPage);
-            _typeTable[10] = typeof(global::Windows.UI.Xaml.Controls.Page);
-            _typeTable[11] = typeof(global::Windows.UI.Xaml.Controls.UserControl);
+            _typeTable[5] = typeof(global::System.Collections.ObjectModel.ObservableCollection<global::French_Conjugations.TenseViewModel>);
+            _typeTable[6] = typeof(global::System.Collections.ObjectModel.Collection<global::French_Conjugations.TenseViewModel>);
+            _typeTable[7] = typeof(global::French_Conjugations.TenseViewModel);
+            _typeTable[8] = typeof(global::System.String[]);
+            _typeTable[9] = typeof(global::System.Array);
+            _typeTable[10] = typeof(global::French_Conjugations.TenseDatabase);
+            _typeTable[11] = typeof(global::System.Collections.Generic.List<global::System.String>);
+            _typeTable[12] = typeof(global::System.Windows.Input.ICommand);
+            _typeTable[13] = typeof(global::French_Conjugations.MainPage);
+            _typeTable[14] = typeof(global::Windows.UI.Xaml.Controls.Page);
+            _typeTable[15] = typeof(global::Windows.UI.Xaml.Controls.UserControl);
         }
 
         private int LookupTypeIndexByName(string typeName)
@@ -187,7 +195,30 @@ namespace French_Conjugations.French_Conjugations_Windows_XamlTypeInfo
 
         private object Activate_0_VerbViewModel() { return new global::French_Conjugations.VerbViewModel(); }
         private object Activate_3_Verb() { return new global::French_Conjugations.Verb(); }
-        private object Activate_9_MainPage() { return new global::French_Conjugations.MainPage(); }
+        private object Activate_5_ObservableCollection() { return new global::System.Collections.ObjectModel.ObservableCollection<global::French_Conjugations.TenseViewModel>(); }
+        private object Activate_6_Collection() { return new global::System.Collections.ObjectModel.Collection<global::French_Conjugations.TenseViewModel>(); }
+        private object Activate_7_TenseViewModel() { return new global::French_Conjugations.TenseViewModel(); }
+        private object Activate_10_TenseDatabase() { return new global::French_Conjugations.TenseDatabase(); }
+        private object Activate_11_List() { return new global::System.Collections.Generic.List<global::System.String>(); }
+        private object Activate_13_MainPage() { return new global::French_Conjugations.MainPage(); }
+        private void VectorAdd_5_ObservableCollection(object instance, object item)
+        {
+            var collection = (global::System.Collections.Generic.ICollection<global::French_Conjugations.TenseViewModel>)instance;
+            var newItem = (global::French_Conjugations.TenseViewModel)item;
+            collection.Add(newItem);
+        }
+        private void VectorAdd_6_Collection(object instance, object item)
+        {
+            var collection = (global::System.Collections.Generic.ICollection<global::French_Conjugations.TenseViewModel>)instance;
+            var newItem = (global::French_Conjugations.TenseViewModel)item;
+            collection.Add(newItem);
+        }
+        private void VectorAdd_11_List(object instance, object item)
+        {
+            var collection = (global::System.Collections.Generic.ICollection<global::System.String>)instance;
+            var newItem = (global::System.String)item;
+            collection.Add(newItem);
+        }
 
         private global::Windows.UI.Xaml.Markup.IXamlType CreateXamlType(int typeIndex)
         {
@@ -206,17 +237,19 @@ namespace French_Conjugations.French_Conjugations_Windows_XamlTypeInfo
                 userType.AddMemberName("VerbSubject");
                 userType.AddMemberName("VerbInfinitive");
                 userType.AddMemberName("VerbEnding");
-                userType.AddMemberName("VerbTense");
-                userType.AddMemberName("VerbListTense");
                 userType.AddMemberName("VerbFinalForm");
                 userType.AddMemberName("VerbInput");
+                userType.AddMemberName("Tenses");
+                userType.AddMemberName("VerbTenses");
+                userType.AddMemberName("SelectedTense");
+                userType.AddMemberName("SelectTense");
                 userType.AddMemberName("UpdateVerbSubject");
                 userType.AddMemberName("UpdateVerbInfinitive");
                 userType.AddMemberName("UpdateVerbInput");
                 userType.AddMemberName("UpdateVerbEnding");
                 userType.AddMemberName("UpdateVerbFinalForm");
-                userType.AddMemberName("UpdateVerbTense");
                 userType.AddMemberName("ConjugateVerb");
+                userType.AddMemberName("UpdateSelectedTense");
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
@@ -242,39 +275,72 @@ namespace French_Conjugations.French_Conjugations_Windows_XamlTypeInfo
                 xamlType = new global::French_Conjugations.French_Conjugations_Windows_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
-            case 5:   //  Int32
-                xamlType = new global::French_Conjugations.French_Conjugations_Windows_XamlTypeInfo.XamlSystemBaseType(typeName, type);
+            case 5:   //  System.Collections.ObjectModel.ObservableCollection`1<French_Conjugations.TenseViewModel>
+                userType = new global::French_Conjugations.French_Conjugations_Windows_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("System.Collections.ObjectModel.Collection`1<French_Conjugations.TenseViewModel>"));
+                userType.CollectionAdd = VectorAdd_5_ObservableCollection;
+                userType.SetIsReturnTypeStub();
+                xamlType = userType;
                 break;
 
-            case 6:   //  String[]
+            case 6:   //  System.Collections.ObjectModel.Collection`1<French_Conjugations.TenseViewModel>
+                userType = new global::French_Conjugations.French_Conjugations_Windows_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
+                userType.Activator = Activate_6_Collection;
+                userType.CollectionAdd = VectorAdd_6_Collection;
+                xamlType = userType;
+                break;
+
+            case 7:   //  French_Conjugations.TenseViewModel
+                userType = new global::French_Conjugations.French_Conjugations_Windows_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
+                userType.Activator = Activate_7_TenseViewModel;
+                userType.AddMemberName("Tense");
+                userType.AddMemberName("Tenses");
+                userType.SetIsLocalType();
+                xamlType = userType;
+                break;
+
+            case 8:   //  String[]
                 userType = new global::French_Conjugations.French_Conjugations_Windows_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("System.Array"));
                 userType.SetIsReturnTypeStub();
                 xamlType = userType;
                 break;
 
-            case 7:   //  System.Array
+            case 9:   //  System.Array
                 userType = new global::French_Conjugations.French_Conjugations_Windows_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
                 xamlType = userType;
                 break;
 
-            case 8:   //  System.Windows.Input.ICommand
+            case 10:   //  French_Conjugations.TenseDatabase
+                userType = new global::French_Conjugations.French_Conjugations_Windows_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("French_Conjugations.ObservableObject"));
+                userType.SetIsReturnTypeStub();
+                userType.SetIsLocalType();
+                xamlType = userType;
+                break;
+
+            case 11:   //  System.Collections.Generic.List`1<String>
+                userType = new global::French_Conjugations.French_Conjugations_Windows_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
+                userType.CollectionAdd = VectorAdd_11_List;
+                userType.SetIsReturnTypeStub();
+                xamlType = userType;
+                break;
+
+            case 12:   //  System.Windows.Input.ICommand
                 userType = new global::French_Conjugations.French_Conjugations_Windows_XamlTypeInfo.XamlUserType(this, typeName, type, null);
                 userType.SetIsReturnTypeStub();
                 xamlType = userType;
                 break;
 
-            case 9:   //  French_Conjugations.MainPage
+            case 13:   //  French_Conjugations.MainPage
                 userType = new global::French_Conjugations.French_Conjugations_Windows_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_9_MainPage;
+                userType.Activator = Activate_13_MainPage;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 10:   //  Windows.UI.Xaml.Controls.Page
+            case 14:   //  Windows.UI.Xaml.Controls.Page
                 xamlType = new global::French_Conjugations.French_Conjugations_Windows_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
-            case 11:   //  Windows.UI.Xaml.Controls.UserControl
+            case 15:   //  Windows.UI.Xaml.Controls.UserControl
                 xamlType = new global::French_Conjugations.French_Conjugations_Windows_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
             }
@@ -322,80 +388,110 @@ namespace French_Conjugations.French_Conjugations_Windows_XamlTypeInfo
             var that = (global::French_Conjugations.VerbViewModel)instance;
             that.VerbEnding = (global::System.String)Value;
         }
-        private object get_4_VerbViewModel_VerbTense(object instance)
-        {
-            var that = (global::French_Conjugations.VerbViewModel)instance;
-            return that.VerbTense;
-        }
-        private void set_4_VerbViewModel_VerbTense(object instance, object Value)
-        {
-            var that = (global::French_Conjugations.VerbViewModel)instance;
-            that.VerbTense = (global::System.Int32)Value;
-        }
-        private object get_5_VerbViewModel_VerbListTense(object instance)
-        {
-            var that = (global::French_Conjugations.VerbViewModel)instance;
-            return that.VerbListTense;
-        }
-        private void set_5_VerbViewModel_VerbListTense(object instance, object Value)
-        {
-            var that = (global::French_Conjugations.VerbViewModel)instance;
-            that.VerbListTense = (global::System.String[])Value;
-        }
-        private object get_6_VerbViewModel_VerbFinalForm(object instance)
+        private object get_4_VerbViewModel_VerbFinalForm(object instance)
         {
             var that = (global::French_Conjugations.VerbViewModel)instance;
             return that.VerbFinalForm;
         }
-        private void set_6_VerbViewModel_VerbFinalForm(object instance, object Value)
+        private void set_4_VerbViewModel_VerbFinalForm(object instance, object Value)
         {
             var that = (global::French_Conjugations.VerbViewModel)instance;
             that.VerbFinalForm = (global::System.String)Value;
         }
-        private object get_7_VerbViewModel_VerbInput(object instance)
+        private object get_5_VerbViewModel_VerbInput(object instance)
         {
             var that = (global::French_Conjugations.VerbViewModel)instance;
             return that.VerbInput;
         }
-        private void set_7_VerbViewModel_VerbInput(object instance, object Value)
+        private void set_5_VerbViewModel_VerbInput(object instance, object Value)
         {
             var that = (global::French_Conjugations.VerbViewModel)instance;
             that.VerbInput = (global::System.String)Value;
         }
-        private object get_8_VerbViewModel_UpdateVerbSubject(object instance)
+        private object get_6_VerbViewModel_Tenses(object instance)
+        {
+            var that = (global::French_Conjugations.VerbViewModel)instance;
+            return that.Tenses;
+        }
+        private void set_6_VerbViewModel_Tenses(object instance, object Value)
+        {
+            var that = (global::French_Conjugations.VerbViewModel)instance;
+            that.Tenses = (global::System.Collections.ObjectModel.ObservableCollection<global::French_Conjugations.TenseViewModel>)Value;
+        }
+        private object get_7_TenseViewModel_Tense(object instance)
+        {
+            var that = (global::French_Conjugations.TenseViewModel)instance;
+            return that.Tense;
+        }
+        private object get_8_TenseViewModel_Tenses(object instance)
+        {
+            var that = (global::French_Conjugations.TenseViewModel)instance;
+            return that.Tenses;
+        }
+        private void set_8_TenseViewModel_Tenses(object instance, object Value)
+        {
+            var that = (global::French_Conjugations.TenseViewModel)instance;
+            that.Tenses = (global::French_Conjugations.TenseDatabase)Value;
+        }
+        private object get_9_VerbViewModel_VerbTenses(object instance)
+        {
+            var that = (global::French_Conjugations.VerbViewModel)instance;
+            return that.VerbTenses;
+        }
+        private object get_10_VerbViewModel_SelectedTense(object instance)
+        {
+            var that = (global::French_Conjugations.VerbViewModel)instance;
+            return that.SelectedTense;
+        }
+        private void set_10_VerbViewModel_SelectedTense(object instance, object Value)
+        {
+            var that = (global::French_Conjugations.VerbViewModel)instance;
+            that.SelectedTense = (global::French_Conjugations.TenseViewModel)Value;
+        }
+        private object get_11_VerbViewModel_SelectTense(object instance)
+        {
+            var that = (global::French_Conjugations.VerbViewModel)instance;
+            return that.SelectTense;
+        }
+        private void set_11_VerbViewModel_SelectTense(object instance, object Value)
+        {
+            var that = (global::French_Conjugations.VerbViewModel)instance;
+            that.SelectTense = (global::System.String)Value;
+        }
+        private object get_12_VerbViewModel_UpdateVerbSubject(object instance)
         {
             var that = (global::French_Conjugations.VerbViewModel)instance;
             return that.UpdateVerbSubject;
         }
-        private object get_9_VerbViewModel_UpdateVerbInfinitive(object instance)
+        private object get_13_VerbViewModel_UpdateVerbInfinitive(object instance)
         {
             var that = (global::French_Conjugations.VerbViewModel)instance;
             return that.UpdateVerbInfinitive;
         }
-        private object get_10_VerbViewModel_UpdateVerbInput(object instance)
+        private object get_14_VerbViewModel_UpdateVerbInput(object instance)
         {
             var that = (global::French_Conjugations.VerbViewModel)instance;
             return that.UpdateVerbInput;
         }
-        private object get_11_VerbViewModel_UpdateVerbEnding(object instance)
+        private object get_15_VerbViewModel_UpdateVerbEnding(object instance)
         {
             var that = (global::French_Conjugations.VerbViewModel)instance;
             return that.UpdateVerbEnding;
         }
-        private object get_12_VerbViewModel_UpdateVerbFinalForm(object instance)
+        private object get_16_VerbViewModel_UpdateVerbFinalForm(object instance)
         {
             var that = (global::French_Conjugations.VerbViewModel)instance;
             return that.UpdateVerbFinalForm;
         }
-        private object get_13_VerbViewModel_UpdateVerbTense(object instance)
-        {
-            var that = (global::French_Conjugations.VerbViewModel)instance;
-            return that.UpdateVerbTense;
-        }
-        private object get_14_VerbViewModel_ConjugateVerb(object instance)
+        private object get_17_VerbViewModel_ConjugateVerb(object instance)
         {
             var that = (global::French_Conjugations.VerbViewModel)instance;
             return that.ConjugateVerb;
+        }
+        private object get_18_VerbViewModel_UpdateSelectedTense(object instance)
+        {
+            var that = (global::French_Conjugations.VerbViewModel)instance;
+            return that.UpdateSelectedTense;
         }
 
         private global::Windows.UI.Xaml.Markup.IXamlMember CreateXamlMember(string longMemberName)
@@ -429,70 +525,94 @@ namespace French_Conjugations.French_Conjugations_Windows_XamlTypeInfo
                 xamlMember.Getter = get_3_VerbViewModel_VerbEnding;
                 xamlMember.Setter = set_3_VerbViewModel_VerbEnding;
                 break;
-            case "French_Conjugations.VerbViewModel.VerbTense":
-                userType = (global::French_Conjugations.French_Conjugations_Windows_XamlTypeInfo.XamlUserType)GetXamlTypeByName("French_Conjugations.VerbViewModel");
-                xamlMember = new global::French_Conjugations.French_Conjugations_Windows_XamlTypeInfo.XamlMember(this, "VerbTense", "Int32");
-                xamlMember.Getter = get_4_VerbViewModel_VerbTense;
-                xamlMember.Setter = set_4_VerbViewModel_VerbTense;
-                break;
-            case "French_Conjugations.VerbViewModel.VerbListTense":
-                userType = (global::French_Conjugations.French_Conjugations_Windows_XamlTypeInfo.XamlUserType)GetXamlTypeByName("French_Conjugations.VerbViewModel");
-                xamlMember = new global::French_Conjugations.French_Conjugations_Windows_XamlTypeInfo.XamlMember(this, "VerbListTense", "String[]");
-                xamlMember.Getter = get_5_VerbViewModel_VerbListTense;
-                xamlMember.Setter = set_5_VerbViewModel_VerbListTense;
-                break;
             case "French_Conjugations.VerbViewModel.VerbFinalForm":
                 userType = (global::French_Conjugations.French_Conjugations_Windows_XamlTypeInfo.XamlUserType)GetXamlTypeByName("French_Conjugations.VerbViewModel");
                 xamlMember = new global::French_Conjugations.French_Conjugations_Windows_XamlTypeInfo.XamlMember(this, "VerbFinalForm", "String");
-                xamlMember.Getter = get_6_VerbViewModel_VerbFinalForm;
-                xamlMember.Setter = set_6_VerbViewModel_VerbFinalForm;
+                xamlMember.Getter = get_4_VerbViewModel_VerbFinalForm;
+                xamlMember.Setter = set_4_VerbViewModel_VerbFinalForm;
                 break;
             case "French_Conjugations.VerbViewModel.VerbInput":
                 userType = (global::French_Conjugations.French_Conjugations_Windows_XamlTypeInfo.XamlUserType)GetXamlTypeByName("French_Conjugations.VerbViewModel");
                 xamlMember = new global::French_Conjugations.French_Conjugations_Windows_XamlTypeInfo.XamlMember(this, "VerbInput", "String");
-                xamlMember.Getter = get_7_VerbViewModel_VerbInput;
-                xamlMember.Setter = set_7_VerbViewModel_VerbInput;
+                xamlMember.Getter = get_5_VerbViewModel_VerbInput;
+                xamlMember.Setter = set_5_VerbViewModel_VerbInput;
+                break;
+            case "French_Conjugations.VerbViewModel.Tenses":
+                userType = (global::French_Conjugations.French_Conjugations_Windows_XamlTypeInfo.XamlUserType)GetXamlTypeByName("French_Conjugations.VerbViewModel");
+                xamlMember = new global::French_Conjugations.French_Conjugations_Windows_XamlTypeInfo.XamlMember(this, "Tenses", "System.Collections.ObjectModel.ObservableCollection`1<French_Conjugations.TenseViewModel>");
+                xamlMember.Getter = get_6_VerbViewModel_Tenses;
+                xamlMember.Setter = set_6_VerbViewModel_Tenses;
+                break;
+            case "French_Conjugations.TenseViewModel.Tense":
+                userType = (global::French_Conjugations.French_Conjugations_Windows_XamlTypeInfo.XamlUserType)GetXamlTypeByName("French_Conjugations.TenseViewModel");
+                xamlMember = new global::French_Conjugations.French_Conjugations_Windows_XamlTypeInfo.XamlMember(this, "Tense", "String[]");
+                xamlMember.Getter = get_7_TenseViewModel_Tense;
+                xamlMember.SetIsReadOnly();
+                break;
+            case "French_Conjugations.TenseViewModel.Tenses":
+                userType = (global::French_Conjugations.French_Conjugations_Windows_XamlTypeInfo.XamlUserType)GetXamlTypeByName("French_Conjugations.TenseViewModel");
+                xamlMember = new global::French_Conjugations.French_Conjugations_Windows_XamlTypeInfo.XamlMember(this, "Tenses", "French_Conjugations.TenseDatabase");
+                xamlMember.Getter = get_8_TenseViewModel_Tenses;
+                xamlMember.Setter = set_8_TenseViewModel_Tenses;
+                break;
+            case "French_Conjugations.VerbViewModel.VerbTenses":
+                userType = (global::French_Conjugations.French_Conjugations_Windows_XamlTypeInfo.XamlUserType)GetXamlTypeByName("French_Conjugations.VerbViewModel");
+                xamlMember = new global::French_Conjugations.French_Conjugations_Windows_XamlTypeInfo.XamlMember(this, "VerbTenses", "System.Collections.Generic.List`1<String>");
+                xamlMember.Getter = get_9_VerbViewModel_VerbTenses;
+                xamlMember.SetIsReadOnly();
+                break;
+            case "French_Conjugations.VerbViewModel.SelectedTense":
+                userType = (global::French_Conjugations.French_Conjugations_Windows_XamlTypeInfo.XamlUserType)GetXamlTypeByName("French_Conjugations.VerbViewModel");
+                xamlMember = new global::French_Conjugations.French_Conjugations_Windows_XamlTypeInfo.XamlMember(this, "SelectedTense", "French_Conjugations.TenseViewModel");
+                xamlMember.Getter = get_10_VerbViewModel_SelectedTense;
+                xamlMember.Setter = set_10_VerbViewModel_SelectedTense;
+                break;
+            case "French_Conjugations.VerbViewModel.SelectTense":
+                userType = (global::French_Conjugations.French_Conjugations_Windows_XamlTypeInfo.XamlUserType)GetXamlTypeByName("French_Conjugations.VerbViewModel");
+                xamlMember = new global::French_Conjugations.French_Conjugations_Windows_XamlTypeInfo.XamlMember(this, "SelectTense", "String");
+                xamlMember.Getter = get_11_VerbViewModel_SelectTense;
+                xamlMember.Setter = set_11_VerbViewModel_SelectTense;
                 break;
             case "French_Conjugations.VerbViewModel.UpdateVerbSubject":
                 userType = (global::French_Conjugations.French_Conjugations_Windows_XamlTypeInfo.XamlUserType)GetXamlTypeByName("French_Conjugations.VerbViewModel");
                 xamlMember = new global::French_Conjugations.French_Conjugations_Windows_XamlTypeInfo.XamlMember(this, "UpdateVerbSubject", "System.Windows.Input.ICommand");
-                xamlMember.Getter = get_8_VerbViewModel_UpdateVerbSubject;
+                xamlMember.Getter = get_12_VerbViewModel_UpdateVerbSubject;
                 xamlMember.SetIsReadOnly();
                 break;
             case "French_Conjugations.VerbViewModel.UpdateVerbInfinitive":
                 userType = (global::French_Conjugations.French_Conjugations_Windows_XamlTypeInfo.XamlUserType)GetXamlTypeByName("French_Conjugations.VerbViewModel");
                 xamlMember = new global::French_Conjugations.French_Conjugations_Windows_XamlTypeInfo.XamlMember(this, "UpdateVerbInfinitive", "System.Windows.Input.ICommand");
-                xamlMember.Getter = get_9_VerbViewModel_UpdateVerbInfinitive;
+                xamlMember.Getter = get_13_VerbViewModel_UpdateVerbInfinitive;
                 xamlMember.SetIsReadOnly();
                 break;
             case "French_Conjugations.VerbViewModel.UpdateVerbInput":
                 userType = (global::French_Conjugations.French_Conjugations_Windows_XamlTypeInfo.XamlUserType)GetXamlTypeByName("French_Conjugations.VerbViewModel");
                 xamlMember = new global::French_Conjugations.French_Conjugations_Windows_XamlTypeInfo.XamlMember(this, "UpdateVerbInput", "System.Windows.Input.ICommand");
-                xamlMember.Getter = get_10_VerbViewModel_UpdateVerbInput;
+                xamlMember.Getter = get_14_VerbViewModel_UpdateVerbInput;
                 xamlMember.SetIsReadOnly();
                 break;
             case "French_Conjugations.VerbViewModel.UpdateVerbEnding":
                 userType = (global::French_Conjugations.French_Conjugations_Windows_XamlTypeInfo.XamlUserType)GetXamlTypeByName("French_Conjugations.VerbViewModel");
                 xamlMember = new global::French_Conjugations.French_Conjugations_Windows_XamlTypeInfo.XamlMember(this, "UpdateVerbEnding", "System.Windows.Input.ICommand");
-                xamlMember.Getter = get_11_VerbViewModel_UpdateVerbEnding;
+                xamlMember.Getter = get_15_VerbViewModel_UpdateVerbEnding;
                 xamlMember.SetIsReadOnly();
                 break;
             case "French_Conjugations.VerbViewModel.UpdateVerbFinalForm":
                 userType = (global::French_Conjugations.French_Conjugations_Windows_XamlTypeInfo.XamlUserType)GetXamlTypeByName("French_Conjugations.VerbViewModel");
                 xamlMember = new global::French_Conjugations.French_Conjugations_Windows_XamlTypeInfo.XamlMember(this, "UpdateVerbFinalForm", "System.Windows.Input.ICommand");
-                xamlMember.Getter = get_12_VerbViewModel_UpdateVerbFinalForm;
-                xamlMember.SetIsReadOnly();
-                break;
-            case "French_Conjugations.VerbViewModel.UpdateVerbTense":
-                userType = (global::French_Conjugations.French_Conjugations_Windows_XamlTypeInfo.XamlUserType)GetXamlTypeByName("French_Conjugations.VerbViewModel");
-                xamlMember = new global::French_Conjugations.French_Conjugations_Windows_XamlTypeInfo.XamlMember(this, "UpdateVerbTense", "System.Windows.Input.ICommand");
-                xamlMember.Getter = get_13_VerbViewModel_UpdateVerbTense;
+                xamlMember.Getter = get_16_VerbViewModel_UpdateVerbFinalForm;
                 xamlMember.SetIsReadOnly();
                 break;
             case "French_Conjugations.VerbViewModel.ConjugateVerb":
                 userType = (global::French_Conjugations.French_Conjugations_Windows_XamlTypeInfo.XamlUserType)GetXamlTypeByName("French_Conjugations.VerbViewModel");
                 xamlMember = new global::French_Conjugations.French_Conjugations_Windows_XamlTypeInfo.XamlMember(this, "ConjugateVerb", "System.Windows.Input.ICommand");
-                xamlMember.Getter = get_14_VerbViewModel_ConjugateVerb;
+                xamlMember.Getter = get_17_VerbViewModel_ConjugateVerb;
+                xamlMember.SetIsReadOnly();
+                break;
+            case "French_Conjugations.VerbViewModel.UpdateSelectedTense":
+                userType = (global::French_Conjugations.French_Conjugations_Windows_XamlTypeInfo.XamlUserType)GetXamlTypeByName("French_Conjugations.VerbViewModel");
+                xamlMember = new global::French_Conjugations.French_Conjugations_Windows_XamlTypeInfo.XamlMember(this, "UpdateSelectedTense", "System.Windows.Input.ICommand");
+                xamlMember.Getter = get_18_VerbViewModel_UpdateSelectedTense;
                 xamlMember.SetIsReadOnly();
                 break;
             }

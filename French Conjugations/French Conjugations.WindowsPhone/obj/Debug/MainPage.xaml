@@ -29,8 +29,9 @@
         <TextBlock x:Name="txtVerbSub" Grid.Row="2" Grid.Column="2" Text="{Binding VerbSubject}" />
         <TextBlock x:Name="textBlock" Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="2"  HorizontalAlignment="Left"  TextWrapping="WrapWholeWords" Text="{Binding VerbFinalForm}" VerticalAlignment="Top" FontSize="48" Width="auto"/>
         <Button x:Name="btnConj" Content="Conjugate" Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="2" HorizontalAlignment="Center" VerticalAlignment="Top" Command="{Binding ConjugateVerb}" Width="109"/>
-        <ListBox x:Name="listTense" Grid.Row="5" Grid.Column="0" Grid.ColumnSpan="2" Background="{ThemeResource PhoneBackgroundBrush}" Foreground="{ThemeResource PhoneForegroundBrush}" ItemsSource="{Binding Path=Verb.VerbTenseArray}" SelectedItem="{Binding Path=VerbCurrentTense, Mode=TwoWay}" FontSize="24" >
+        <ListBox x:Name="listTense" Grid.Row="5" Grid.Column="0" Grid.ColumnSpan="2" Background="{ThemeResource PhoneBackgroundBrush}" Foreground="{ThemeResource PhoneForegroundBrush}" ItemsSource="{Binding VerbTenses}" FontSize="24" SelectedItem="{Binding Path=SelectTense, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" >
         </ListBox>
+        
     </Grid>
 </Page>
 

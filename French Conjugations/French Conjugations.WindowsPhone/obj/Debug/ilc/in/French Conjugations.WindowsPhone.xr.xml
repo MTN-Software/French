@@ -1,9 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Roots xmlns="clr-namespace:Microsoft.Xaml.Tools.XamlCompiler.RootLog;assembly=Microsoft.Windows.UI.Xaml.81.Build.Tasks">
   <Roots.PropertyPathNames>
-    <RootPropertyPathName Name="Verb" />
-    <RootPropertyPathName Name="VerbTenseArray" />
-    <RootPropertyPathName Name="VerbCurrentTense" />
+    <RootPropertyPathName Name="VerbTenses" />
+    <RootPropertyPathName Name="SelectTense" />
     <RootPropertyPathName Name="ConjugateVerb" />
     <RootPropertyPathName Name="VerbFinalForm" />
     <RootPropertyPathName Name="VerbSubject" />
@@ -58,8 +57,8 @@
       <RootProperty Name="Background" />
       <RootProperty Name="Foreground" />
       <RootProperty Name="ItemsSource" />
-      <RootProperty Name="SelectedItem" />
       <RootProperty Name="FontSize" />
+      <RootProperty Name="SelectedItem" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Data.Binding">
       <RootProperty Name="Path" />

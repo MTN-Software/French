@@ -14,10 +14,6 @@ namespace French_Conjugations
         string _infinitive;
         string _subject;
         string _input;      // combination of infinitive and subject
-        int _tense;         // this will break if touched
-        readonly string[] _listTense =
-        { "Present", "Passé composé", "Imperfect",
-            "Futur Proche", "Futur Simple", "Conditional" };
         string _ending;
         string _conjugateOut;
         #endregion
@@ -31,7 +27,7 @@ namespace French_Conjugations
             get { return _infinitive; }
             set { _infinitive = value; }
         }
-
+        
         /// <summary>
         /// The Subject of the verb
         /// </summary>
@@ -48,15 +44,6 @@ namespace French_Conjugations
         {
             get { return _input; }
             set { _input = value; }
-        }
-
-        /// <summary>
-        /// The tense that the verb is in.
-        /// </summary>
-        public int VerbTense
-        {
-            get { return _tense; }
-            set { _tense = value; }
         }
 
         /// <summary>
@@ -77,13 +64,6 @@ namespace French_Conjugations
             set { _conjugateOut = value; }
         }
 
-        /// <summary>
-        /// 
-        /// </summary>
-        public string[] VerbTenseArray
-        {
-            get { return _listTense; }
-        }
 
         #endregion
     }

@@ -170,7 +170,7 @@ namespace French_Conjugations
                 {
                     Verb.VerbInput = value;
                     RaisePropertyChanged("VerbInput");
-                    QuickConjugate();
+                    //QuickConjugate();
                 }
             }
         }

@@ -14,20 +14,10 @@ namespace French_Conjugations
         string _infinitive;
         string _subject;
         string _input;      // combination of infinitive and subject
-        public enum _enumTense : int   // Dear god someone help
-        {
-            present = 0,
-            passe_comp,
-            imperfect,
-            futur_proche,
-            futur_simple,
-            conditional
-        };
+
         readonly string[] _listTense =
         { "Present", "Passé composé", "Imperfect",
             "Futur Proche", "Futur Simple", "Conditional" };
-        int _tense;
-        ObservableCollection<int> _currentTense;
         string _ending;
         string _conjugateOut;
         #endregion
@@ -95,14 +85,6 @@ namespace French_Conjugations
             get { return _listTense; }
         }
 
-        /// <summary>
-        /// The current tense of the verb
-        /// </summary>
-        public ObservableCollection<int> VerbCurrentTense
-        {
-            get { return _currentTense; }
-            set { _currentTense = value; }
-        }
         #endregion
     }
 }

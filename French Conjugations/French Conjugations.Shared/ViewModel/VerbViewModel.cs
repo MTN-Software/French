@@ -6,9 +6,10 @@ using System.ComponentModel;
 using System.Windows.Input;
 using System.Threading.Tasks;
 
+
 namespace French_Conjugations
 {
-    public class VerbViewModel : ObservableCollection<int>, INotifyPropertyChanged 
+    public class VerbViewModel : ObservableObject
     {
         #region Construction
         /// <summary>
@@ -23,21 +24,20 @@ namespace French_Conjugations
 
             for (int i = 0; i < 4; i++)
             {
-                _verb.VerbCurrentTense.Add(i);
+                //_verb.VerbCurrentTense.Add(i);
             }
         }
         #endregion
 
         #region Members
         Verb _verb;
-        
+        int _tense = 0;
         #endregion
 
         #region Properties
         public Verb Verb
         {
-            get
-            { return _verb; }
+            get { return _verb; }
             set { _verb = value; }
         }
 
@@ -95,6 +95,8 @@ namespace French_Conjugations
                 }
             }
         }
+
+
         public int VerbTense
         {
             get { return Verb.VerbTense; }
@@ -128,23 +130,6 @@ namespace French_Conjugations
             }
         }
 
-        private ObservableCollection<int> verbCurrentTense = new ObservableCollection<int>();
-        public ObservableCollection<int> VerbCurrentTense
-        {
-            get { return Verb.VerbCurrentTense; }
-            set
-            {
-                try
-                {
-                    Verb.VerbCurrentTense = value;
-                    RaisePropertyChanged("VerbCurrentTense");
-                }
-                catch (Exception ex)
-                {
-                    RaisePropertyChanged("VerbCurrentTense");
-                }
-            }
-        }
         public string VerbFinalForm
         {
             get { return Verb.VerbFinalForm; }
@@ -220,20 +205,7 @@ namespace French_Conjugations
 
         #endregion
 
-        #region INotifyPropertyChanged Members
-        public event PropertyChangedEventHandler PropertyChanged;
-        #endregion
-
         #region Methods
-        private void RaisePropertyChanged(string propertyName)
-        {
-            // take a copy to prevent thread issues
-            PropertyChangedEventHandler handler = PropertyChanged;
-            if (handler != null)
-            {
-                handler(this, new PropertyChangedEventArgs(propertyName));
-            }
-        }
 
         public string CalcVerbEnding(Verb Verb)
         {

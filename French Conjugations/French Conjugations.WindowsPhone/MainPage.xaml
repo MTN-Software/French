@@ -10,27 +10,33 @@
     <Page.DataContext>
         <local:VerbViewModel/>
     </Page.DataContext>
+    <Page.BottomAppBar>
+        <CommandBar>
+            <CommandBar.PrimaryCommands>
+                <AppBarButton Icon="ReShare" Label="Conjugate" Command="{Binding Path=ConjugateVerb}"/>
+            </CommandBar.PrimaryCommands>
+            <CommandBar.SecondaryCommands>
+                
+            </CommandBar.SecondaryCommands>
+        </CommandBar>
+    </Page.BottomAppBar>
     <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition Height="60"/>
+            
             <RowDefinition Height="13"/>
             <RowDefinition Height="13"/>
             <RowDefinition Height="56"/>
-            <RowDefinition Height="58"/>
             <RowDefinition Height="*"/>
+            <RowDefinition Height="60"/>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*" />
             <ColumnDefinition Width="*" />
         </Grid.ColumnDefinitions>
-        <TextBox x:Name="txtVerb" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" Text="{Binding VerbInput, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
-        <TextBlock x:Name="txtVerbLabel" Grid.Row="1" Grid.Column="0" Text="{Binding VerbInput}" />
-        <TextBlock x:Name="txtVerbInf" Grid.Row="2" Text="{Binding VerbInfinitive}" />
-        <TextBlock x:Name="txtVerbSub" Grid.Row="2" Grid.Column="2" Text="{Binding VerbSubject}" />
-        <TextBlock x:Name="textBlock" Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="2"  HorizontalAlignment="Left"  TextWrapping="WrapWholeWords" Text="{Binding VerbFinalForm}" VerticalAlignment="Top" FontSize="48" Width="auto"/>
-        <Button x:Name="btnConj" Content="Conjugate" Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="2" HorizontalAlignment="Center" VerticalAlignment="Top" Command="{Binding ConjugateVerb}" Width="109"/>
-        <ListBox x:Name="listTense" Grid.Row="5" Grid.Column="0" Grid.ColumnSpan="2" Background="{ThemeResource PhoneBackgroundBrush}" Foreground="{ThemeResource PhoneForegroundBrush}" ItemsSource="{Binding VerbTenses}" FontSize="24" SelectedItem="{Binding Path=SelectTense, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" >
+        <TextBox x:Name="txtVerb" Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="2" Text="{Binding VerbInput, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Margin="10,10,10,0"/>
+        <TextBlock x:Name="textBlock" Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2"  HorizontalAlignment="Left"  TextWrapping="WrapWholeWords" Text="{Binding VerbFinalForm}" VerticalAlignment="Top" FontSize="48" Width="auto" Margin="10,0,0,0"/>
+        <ListBox x:Name="listTense" Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="2" Background="{ThemeResource PhoneBackgroundBrush}" Foreground="{ThemeResource PhoneForegroundBrush}" ItemsSource="{Binding VerbTenses}" FontSize="24" SelectedItem="{Binding Path=SelectTense, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Margin="10,0,0,0" >
         </ListBox>
-        
     </Grid>
 </Page>
+ 

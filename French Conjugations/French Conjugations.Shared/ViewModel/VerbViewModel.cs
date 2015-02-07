@@ -148,7 +148,7 @@ namespace French_Conjugations
                     }
                     else
                     {
-                        carryOutVerb = string.Concat(Verb.VerbSubject, " ", helping, " ", root, append);
+                        carryOutVerb = string.Concat(Verb.VerbSubject, " ", helping, root, append);
                     }
                     Verb.VerbFinalForm = carryOutVerb;
                     RaisePropertyChanged("VerbFinalForm");

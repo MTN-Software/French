@@ -8,6 +8,8 @@ using System.Threading.Tasks;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
 using Windows.Foundation.Metadata;
+using System.Reflection;
+using Windows.UI.Popups;
 
 namespace French_Conjugations
 {
@@ -77,7 +79,7 @@ namespace French_Conjugations
                 try
                 {
                     int indexOfSpace = Verb.VerbInput.IndexOf(' ');
-                    Verb.VerbInfinitive = VerbInput.Substring(indexOfSpace, Verb.VerbInput.Length - indexOfSpace);
+                    Verb.VerbInfinitive = VerbInput.Substring(indexOfSpace + 1, Verb.VerbInput.Length - (indexOfSpace + 1));
                     RaisePropertyChanged("VerbInfinitive");
                 }
                 catch (Exception ex)
@@ -117,17 +119,17 @@ namespace French_Conjugations
                     string helping = string.Empty;
                     string append = string.Empty;
                     string carryOutVerb = string.Empty;
-                    
+                    string replaceInf = string.Empty;
                     switch (SelectTense)
                     {
                         case "Present":
-                            append = PresentConj(append);
+                            append = PresentConj(Verb.VerbSubject.ToLower());
                             break;
                         case "Passé composé":
                             append = PasseConj(append);
                             break;
                         case "Imperfect":
-                            append = ImperfectConj(append);
+                            replaceInf = ImperfectConj(Verb.VerbEnding.ToLower());
                             break;
                         case "Futur Proche":
                             helping = ProcheConj(append);
@@ -147,7 +149,14 @@ namespace French_Conjugations
 
                     if (helping == string.Empty)
                     {
-                        carryOutVerb = string.Concat(Verb.VerbSubject, " ", root, append);
+                        if (replaceInf == string.Empty)
+                        {
+                            carryOutVerb = string.Concat(Verb.VerbSubject, " ", root, append);
+                        }
+                        else
+                        {
+                            carryOutVerb = string.Concat(Verb.VerbSubject, " ", replaceInf);
+                        }
                     }
                     else
                     {
@@ -348,28 +357,79 @@ namespace French_Conjugations
             return append;
         }
 
-        private string PasseConj(string append)
+        private string PasseConj(string infinitive)
         {
+            msgShow();
+            string append = string.Empty;
             return append;
         }
 
         /// <summary>
         /// Conjugates the input to match the imperfect past form
         /// </summary>
+        /// <remarks>
+        /// Has some bugs that could use fixing
+        /// </remarks>
         /// <param name="append"> </param>
         /// <returns></returns>
-        private string ImperfectConj(string append)
+        private string ImperfectConj(string infinitive)
         {
-            return append;
+            string tempSub = Verb.VerbSubject; // backs up the original verb subject
+            Verb tempVerb = Verb;              // creates clone of the Verb
+            tempVerb.VerbSubject = "nous";     // changes subject to "nous"
+            tempVerb.VerbInput = "nous " + Verb.VerbInfinitive; // changes input to "nous " + the input infinitive
+            SelectTense = "Present";            // changes tense to present 
+            ConjugateVerbIn(tempVerb);          // conjugates tempVerb
+            int indexOfSpace = tempVerb.VerbFinalForm.IndexOf(' '); // gets position of ' ' in string tempVerb.FinalForm
+            // creates a variable to store the returned conjugated verb to be used in later conjugation
+            string tempInf = tempVerb.VerbFinalForm.Substring(indexOfSpace + 1, tempVerb.VerbFinalForm.Length - (indexOfSpace + 1));
+            string tempRoot = tempInf.Substring(0, tempInf.IndexOf("ons"));     // extracts root of conjugated verb
+            SelectTense = "Imperfect";              // resets tense to infinitive
+            tempVerb.VerbSubject = tempSub;         // resets subject to the orinial subject
+            string append;                          // create string append
+
+            // sets the append variable to an imperfect verb ending
+            switch (Verb.VerbSubject.ToLower())
+            {
+                case "je":
+                    append = "ais";
+                    break;
+                case "tu":
+                    append = "ais";
+                    break;
+                case "il":
+                case "elle":
+                case "on":
+                    append = "ait";
+                    break;
+                case "nous":
+                    append = "ions";
+                    break;
+                case "vous":
+                    append = "iez";
+                    break;
+                case "ils":
+                case "elles":
+                    append = "aient";
+                    break;
+                default:
+                    append = "";
+                    break;
+            }
+
+            string ret = string.Concat(tempRoot, append);   // concatenates the root and the ending
+            Verb.VerbSubject = tempSub;                     // resets the subject to the original one
+            return ret;                                     // return result
         }
 
         /// <summary>
         /// Injects the helper verb for futur proche verbs
         /// </summary>
-        /// <param name="append"></param>
+        /// <param name="infinitive"></param>
         /// <returns></returns>
-        private string ProcheConj(string append)
+        private string ProcheConj(string infinitive)
         {
+            string append;
             switch (Verb.VerbSubject.ToLower())
             {
                 case "je":
@@ -402,12 +462,33 @@ namespace French_Conjugations
 
         private string FuturSimpleConj(string append)
         {
+            msgShow();
             return append;
         }
 
         private string ConditionalConj(string append)
         {
+            msgShow();
             return append;
+        }
+
+        /// <summary>
+        /// Conjugate the verb
+        /// </summary>
+        private void ConjugateVerbIn(Verb Verb)
+        {
+            UpdateVerbInfinitiveExecute();
+            UpdateVerbSubjectExecute();
+            UpdateVerbInputExecute();
+            UpdateVerbEndingExecute();
+            CalcVerbEnding(Verb);
+            UpdateVerbFinalFormExecute();
+        }
+
+        private async void msgShow()
+        {
+            MessageDialog msg = new MessageDialog("Sorry, that operation is not supported yet!", "Yeah, about that...");
+            await msg.ShowAsync();
         }
         #endregion
 

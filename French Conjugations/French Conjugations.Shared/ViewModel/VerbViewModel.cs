@@ -5,6 +5,9 @@ using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.Windows.Input;
 using System.Threading.Tasks;
+using Windows.Foundation;
+using Windows.Foundation.Collections;
+using Windows.Foundation.Metadata;
 
 namespace French_Conjugations
 {
@@ -155,6 +158,7 @@ namespace French_Conjugations
                 }
                 catch (Exception ex)
                 {
+                    
                     RaisePropertyChanged("VerbFinalForm");
                 }
             }
@@ -170,7 +174,7 @@ namespace French_Conjugations
                 {
                     Verb.VerbInput = value;
                     RaisePropertyChanged("VerbInput");
-                    //QuickConjugate();
+                    //QuickConjugate(); // Obsolete
                 }
             }
         }
@@ -214,12 +218,22 @@ namespace French_Conjugations
 
         #region Methods
 
+        /// <summary>
+        /// Calculates the verb ending (i.e. er, re, ir)
+        /// </summary>
+        /// <param name="Verb">Verb to calculate the ending of</param>
+        /// <returns>The last two letters of the Verb</returns>
         public string CalcVerbEnding(Verb Verb)
         {
             int length = Verb.VerbInput.Length;
             return Verb.VerbInput.Substring(length - 2, 2);
         }
 
+        /// <summary>
+        /// Quickly conjugates as user inputs string, worked well when only using one tense.
+        /// MTN French Conjugations will not be implemented in future updates
+        /// </summary>
+        [Deprecated("French Conjugator will no longer use this method because it breaks the UX", DeprecationType.Deprecate, 100859904)]
         private void QuickConjugate()
         {
             VerbInfinitive = _verb.VerbInfinitive.ToLower();
@@ -235,6 +249,11 @@ namespace French_Conjugations
             VerbFinalForm = _verb.VerbFinalForm.ToLower();
         }
 
+        /// <summary>
+        /// Conjugate verb with respect to present tense
+        /// </summary>
+        /// <param name="append"></param>
+        /// <returns></returns>
         private string PresentConj(string append)
         {
             switch (Verb.VerbEnding)
@@ -334,11 +353,21 @@ namespace French_Conjugations
             return append;
         }
 
+        /// <summary>
+        /// Conjugates the input to match the imperfect past form
+        /// </summary>
+        /// <param name="append"> </param>
+        /// <returns></returns>
         private string ImperfectConj(string append)
         {
             return append;
         }
 
+        /// <summary>
+        /// Injects the helper verb for futur proche verbs
+        /// </summary>
+        /// <param name="append"></param>
+        /// <returns></returns>
         private string ProcheConj(string append)
         {
             switch (Verb.VerbSubject.ToLower())
@@ -411,7 +440,9 @@ namespace French_Conjugations
         }
 
 
-        // All this does now is update the properties
+        /// <summary>
+        /// Conjugate the verb
+        /// </summary>
         void ConjugateVerbExecute()
         {
             UpdateVerbInfinitiveExecute();

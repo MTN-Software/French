@@ -7,6 +7,10 @@ using System.Collections.ObjectModel;
 // this file is actually relatively useless
 namespace French_Conjugations
 {
+    /// <summary>
+    /// This is pretty useless, but somehow the program breaks without it.
+    /// Anyways, it's the ViewModel to the TenseDatabase class
+    /// </summary>
     public class TenseViewModel 
     {
         #region Construction

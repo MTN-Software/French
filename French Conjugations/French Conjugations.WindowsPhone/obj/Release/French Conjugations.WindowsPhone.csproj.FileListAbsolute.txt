@@ -1,0 +1,47 @@
+C:\Users\Thomas\Source\Repos\French\French Conjugations\French Conjugations.WindowsPhone\bin\Release\App.xbf
+C:\Users\Thomas\Source\Repos\French\French Conjugations\French Conjugations.WindowsPhone\bin\Release\MainPage.xbf
+C:\Users\Thomas\Source\Repos\French\French Conjugations\French Conjugations.WindowsPhone\bin\Release\French Conjugations.WindowsPhone.xr.xml
+C:\Users\Thomas\Source\Repos\French\French Conjugations\French Conjugations.WindowsPhone\bin\Release\French Conjugations.WindowsPhone.exe
+C:\Users\Thomas\Source\Repos\French\French Conjugations\French Conjugations.WindowsPhone\bin\Release\French Conjugations.WindowsPhone.pdb
+C:\Users\Thomas\Source\Repos\French\French Conjugations\French Conjugations.WindowsPhone\bin\Release\resources.pri
+C:\Users\Thomas\Source\Repos\French\French Conjugations\French Conjugations.WindowsPhone\bin\Release\AppxManifest.xml
+C:\Users\Thomas\Source\Repos\French\French Conjugations\French Conjugations.WindowsPhone\bin\Release\French Conjugations.WindowsPhone.build.appxrecipe
+C:\Users\Thomas\Source\Repos\French\French Conjugations\French Conjugations.WindowsPhone\obj\Release\App.g.i.cs
+C:\Users\Thomas\Source\Repos\French\French Conjugations\French Conjugations.WindowsPhone\obj\Release\App.g.cs
+C:\Users\Thomas\Source\Repos\French\French Conjugations\French Conjugations.WindowsPhone\obj\Release\MainPage.g.i.cs
+C:\Users\Thomas\Source\Repos\French\French Conjugations\French Conjugations.WindowsPhone\obj\Release\MainPage.g.cs
+C:\Users\Thomas\Source\Repos\French\French Conjugations\French Conjugations.WindowsPhone\obj\Release\XamlTypeInfo.g.cs
+C:\Users\Thomas\Source\Repos\French\French Conjugations\French Conjugations.WindowsPhone\obj\Release\App.xaml
+C:\Users\Thomas\Source\Repos\French\French Conjugations\French Conjugations.WindowsPhone\obj\Release\MainPage.xaml
+C:\Users\Thomas\Source\Repos\French\French Conjugations\French Conjugations.WindowsPhone\obj\Release\App.xbf
+C:\Users\Thomas\Source\Repos\French\French Conjugations\French Conjugations.WindowsPhone\obj\Release\MainPage.xbf
+C:\Users\Thomas\Source\Repos\French\French Conjugations\French Conjugations.WindowsPhone\obj\Release\XamlSaveStateFile.xml
+C:\Users\Thomas\Source\Repos\French\French Conjugations\French Conjugations.WindowsPhone\obj\Release\French Conjugations.WindowsPhone.exe
+C:\Users\Thomas\Source\Repos\French\French Conjugations\French Conjugations.WindowsPhone\obj\Release\French Conjugations.WindowsPhone.pdb
+C:\Users\Thomas\Source\Repos\French\French Conjugations\French Conjugations.WindowsPhone\obj\Release\priconfig.xml
+C:\Users\Thomas\Source\Repos\French\French Conjugations\French Conjugations.WindowsPhone\obj\Release\priconfig.xml.intermediate
+C:\Users\Thomas\Source\Repos\French\French Conjugations\French Conjugations.WindowsPhone\obj\Release\layout.resfiles
+C:\Users\Thomas\Source\Repos\French\French Conjugations\French Conjugations.WindowsPhone\obj\Release\layout.resfiles.intermediate
+C:\Users\Thomas\Source\Repos\French\French Conjugations\French Conjugations.WindowsPhone\obj\Release\resources.resfiles
+C:\Users\Thomas\Source\Repos\French\French Conjugations\French Conjugations.WindowsPhone\obj\Release\resources.resfiles.intermediate
+C:\Users\Thomas\Source\Repos\French\French Conjugations\French Conjugations.WindowsPhone\obj\Release\pri.resfiles
+C:\Users\Thomas\Source\Repos\French\French Conjugations\French Conjugations.WindowsPhone\obj\Release\pri.resfiles.intermediate
+C:\Users\Thomas\Source\Repos\French\French Conjugations\French Conjugations.WindowsPhone\obj\Release\qualifiers.txt
+C:\Users\Thomas\Source\Repos\French\French Conjugations\French Conjugations.WindowsPhone\obj\Release\qualifiers.txt.intermediate
+C:\Users\Thomas\Source\Repos\French\French Conjugations\French Conjugations.WindowsPhone\obj\Release\MultipleQualifiersPerDimensionFound.txt
+C:\Users\Thomas\Source\Repos\French\French Conjugations\French Conjugations.WindowsPhone\obj\Release\ProjectArchitectures.txt
+C:\Users\Thomas\Source\Repos\French\French Conjugations\French Conjugations.WindowsPhone\obj\Release\ilc\in\French Conjugations.WindowsPhone.exe
+C:\Users\Thomas\Source\Repos\French\French Conjugations\French Conjugations.WindowsPhone\obj\Release\ilc\in\French Conjugations.WindowsPhone.pdb
+C:\Users\Thomas\Source\Repos\French\French Conjugations\French Conjugations.WindowsPhone\obj\Release\ilc\in\Assets\Logo.scale-240.png
+C:\Users\Thomas\Source\Repos\French\French Conjugations\French Conjugations.WindowsPhone\obj\Release\ilc\in\Assets\MarketplaceIcon.png
+C:\Users\Thomas\Source\Repos\French\French Conjugations\French Conjugations.WindowsPhone\obj\Release\ilc\in\Assets\SmallLogo.scale-240.png
+C:\Users\Thomas\Source\Repos\French\French Conjugations\French Conjugations.WindowsPhone\obj\Release\ilc\in\Assets\SplashScreen.scale-240.png
+C:\Users\Thomas\Source\Repos\French\French Conjugations\French Conjugations.WindowsPhone\obj\Release\ilc\in\Assets\SplashScreenImage.png
+C:\Users\Thomas\Source\Repos\French\French Conjugations\French Conjugations.WindowsPhone\obj\Release\ilc\in\Assets\Square71x71Logo.scale-240.png
+C:\Users\Thomas\Source\Repos\French\French Conjugations\French Conjugations.WindowsPhone\obj\Release\ilc\in\Assets\StoreLogo.scale-240.png
+C:\Users\Thomas\Source\Repos\French\French Conjugations\French Conjugations.WindowsPhone\obj\Release\ilc\in\Assets\WideLogo.scale-240.png
+C:\Users\Thomas\Source\Repos\French\French Conjugations\French Conjugations.WindowsPhone\obj\Release\ilc\in\default.rd.xml
+C:\Users\Thomas\Source\Repos\French\French Conjugations\French Conjugations.WindowsPhone\obj\Release\ilc\in\App.xbf
+C:\Users\Thomas\Source\Repos\French\French Conjugations\French Conjugations.WindowsPhone\obj\Release\ilc\in\MainPage.xbf
+C:\Users\Thomas\Source\Repos\French\French Conjugations\French Conjugations.WindowsPhone\obj\Release\ilc\in\French Conjugations.WindowsPhone.xr.xml
+C:\Users\Thomas\Source\Repos\French\French Conjugations\French Conjugations.WindowsPhone\obj\Release\ilc\in\resources.pri

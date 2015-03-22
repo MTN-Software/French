@@ -10,7 +10,7 @@
   <Identity Name="2cfb407d-fe8a-4f50-b73a-4146d9720958" Publisher="CN=Thomas" Version="1.0.0.0" ProcessorArchitecture="neutral" />
   <mp:PhoneIdentity PhoneProductId="2cfb407d-fe8a-4f50-b73a-4146d9720958" PhonePublisherId="00000000-0000-0000-0000-000000000000" />
   <Properties>
-    <DisplayName>French Conjugations</DisplayName>
+    <DisplayName>French Conjugations BETA</DisplayName>
     <PublisherDisplayName>MTN Software</PublisherDisplayName>
     <Logo>Assets\StoreLogo.png</Logo>
   </Properties>
@@ -23,9 +23,14 @@
   </Resources>
   <Applications>
     <Application Id="App" Executable="French Conjugations.WindowsPhone.exe" EntryPoint="French_Conjugations.WindowsPhone.App">
-      <m3:VisualElements DisplayName="French Conjugations.WindowsPhone" Square150x150Logo="Assets\Logo.png" Square44x44Logo="Assets\SmallLogo.png" Description="French Conjugations.WindowsPhone" ForegroundText="light" BackgroundColor="transparent">
+      <m3:VisualElements DisplayName="French Conjugations BETA" Square150x150Logo="Assets\Logo.png" Square44x44Logo="Assets\SmallLogo.png" Description="Now backed using MTN VerbSense!  This is a beta version of the current &quot;French Conjugator&quot; app.  Because of the current overhaul, there may be some errors so please don't hesitate to send suggestions or bug reports.  Purchasing the paid version helps support us and allows us to develop new features and software quicker." ForegroundText="light" BackgroundColor="transparent">
         <m3:DefaultTile Wide310x150Logo="Assets\WideLogo.png" Square71x71Logo="Assets\Square71x71Logo.png"></m3:DefaultTile>
         <m3:SplashScreen Image="Assets\SplashScreen.png" />
+        <m3:InitialRotationPreference>
+          <m3:Rotation Preference="portrait" />
+          <m3:Rotation Preference="landscape" />
+          <m3:Rotation Preference="landscapeFlipped" />
+        </m3:InitialRotationPreference>
       </m3:VisualElements>
     </Application>
   </Applications>

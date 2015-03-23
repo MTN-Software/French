@@ -6,7 +6,7 @@
     <TargetPlatformIdentifier>WindowsPhoneApp</TargetPlatformIdentifier>
     <SolutionConfiguration>Debug|AnyCPU</SolutionConfiguration>
     <PackageArchitecture>neutral</PackageArchitecture>
-    <PackageIdentityName>2cfb407d-fe8a-4f50-b73a-4146d9720958</PackageIdentityName>
+    <PackageIdentityName>21713419-da25-4716-958a-bdf63ad1e99c</PackageIdentityName>
     <IntermediateOutputPath>C:\Users\Thomas\Source\Repos\French\French Conjugations\French Conjugations.WindowsPhone\obj\Debug\</IntermediateOutputPath>
   </PropertyGroup>
   <ItemGroup>

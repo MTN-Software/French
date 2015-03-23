@@ -147,35 +147,40 @@ namespace French_Conjugations
                             break;
                         case "Futur Simple":
                             append = FuturSimpleConj(append);
+                            carryOutVerb = string.Concat(Verb.VerbSubject, " ", Verb.VerbInfinitive, append);
                             break;
                         case "Conditional":
                             append = ConditionalConj(append);
+                            carryOutVerb = string.Concat(Verb.VerbSubject, " ", Verb.VerbInfinitive, append);
                             break;
                         default:
                             append = PresentConj(append);
                             break;
                     }
 
-                    if (helping == string.Empty)
+                    if (carryOutVerb == string.Empty)       // sets carryOutVerb's value if not already set
                     {
-                        if (replaceInf == string.Empty)
+                        if (helping == string.Empty)        // if there isn't any helping verb
                         {
-                            carryOutVerb = string.Concat(Verb.VerbSubject, " ", root, append);
+                            if (replaceInf == string.Empty)
+                            {
+                                carryOutVerb = string.Concat(Verb.VerbSubject, " ", root, append);
+                            }
+                            else
+                            {
+                                carryOutVerb = string.Concat(Verb.VerbSubject, " ", replaceInf);
+                            }
                         }
-                        else
+                        else                                // if there is a helping verb
                         {
-                            carryOutVerb = string.Concat(Verb.VerbSubject, " ", replaceInf);
-                        }
-                    }
-                    else
-                    {
-                        if (replaceInf == string.Empty)
-                        {
-                            carryOutVerb = string.Concat(Verb.VerbSubject, " ", helping, root, append);
-                        }
-                        else
-                        {
-                            carryOutVerb = string.Concat(Verb.VerbSubject, " ", helping, " ", replaceInf);
+                            if (replaceInf == string.Empty)
+                            {
+                                carryOutVerb = string.Concat(Verb.VerbSubject, " ", helping, root, append);
+                            }
+                            else
+                            {
+                                carryOutVerb = string.Concat(Verb.VerbSubject, " ", helping, " ", replaceInf);
+                            }
                         }
                     }
                     Verb.VerbFinalForm = carryOutVerb;
@@ -183,7 +188,7 @@ namespace French_Conjugations
                 }
                 catch (Exception ex)
                 {
-                    
+                    msgBox(ex.Message, "Well, this isn't good");
                     RaisePropertyChanged("VerbFinalForm");
                 }
             }
@@ -643,13 +648,70 @@ namespace French_Conjugations
 
         private string FuturSimpleConj(string append)
         {
-            msgShow();
-            return append;
+            //msgShow();
+            switch (Verb.VerbSubject.ToLower())
+            {
+                case "je":
+                    append = "ai";
+                    break;
+                case "tu":
+                    append = "as";
+                    break;
+                case "il":
+                case "elle":
+                case "on":
+                    append = "a";
+                    break;
+                case "nous":
+                    append = "avons";
+                    break;
+                case "vous":
+                    append = "avez";
+                    break;
+                case "ils":
+                case "elles":
+                    append = "ont";
+                    break;
+                default:
+                    break;
+            }
+                    return append;
         }
 
-        private string ConditionalConj(string append)
+        private string ConditionalConj(string infinitive)
         {
-            msgShow();
+            //msgShow();
+            string append;                                                      // create string append
+
+            // sets the append variable to a conditional verb ending
+            switch (Verb.VerbSubject.ToLower())
+            {
+                case "je":
+                    append = "ais";
+                    break;
+                case "tu":
+                    append = "ais";
+                    break;
+                case "il":
+                case "elle":
+                case "on":
+                    append = "ait";
+                    break;
+                case "nous":
+                    append = "ions";
+                    break;
+                case "vous":
+                    append = "iez";
+                    break;
+                case "ils":
+                case "elles":
+                    append = "aient";
+                    break;
+                default:
+                    append = "";
+                    break;
+            }
+
             return append;
         }
 
@@ -666,9 +728,26 @@ namespace French_Conjugations
             UpdateVerbFinalFormExecute();
         }
 
+        /// <summary>
+        /// If a feature is not yet fully implemented, use this as a band-aid to cover
+        /// </summary>
+        /// <remarks>
+        /// Use as sparingly as possible
+        /// </remarks>
         private async void msgShow()
         {
             MessageDialog msg = new MessageDialog("Sorry, that operation is not supported yet!", "Yeah, about that...");
+            await msg.ShowAsync();
+        }
+
+        /// <summary>
+        /// Custom Message box
+        /// </summary>
+        /// <param name="message">The message you want to display</param>
+        /// <param name="title">The title of the Message box</param>
+        private async void msgBox(string message, string title)
+        {
+            MessageDialog msg = new MessageDialog(message, title);
             await msg.ShowAsync();
         }
         #endregion

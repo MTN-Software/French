@@ -15,28 +15,28 @@ namespace French_Conjugations
         //
         // Returns:
         //     The handler type of the routed event.
-        public Type HandlerType { get; }
+        //public Type HandlerType { get; }
         //
         // Summary:
         //     Gets the identifying name of the routed event.
         //
         // Returns:
         //     The name of the routed event.
-        public string Name { get; }
+        //public string Name { get; }
         //
         // Summary:
         //     Gets the registered owner type of the routed event.
         //
         // Returns:
         //     The owner type of the routed event.
-        public Type OwnerType { get; }
+        //public Type OwnerType { get; }
         //
         // Summary:
         //     Gets the routing strategy of the routed event.
         //
         // Returns:
         //     One of the enumeration values. The default is the enumeration default, System.Windows.RoutingStrategy.Bubble.
-        public RoutingStrategy RoutingStrategy { get; }
+        //public RoutingStrategy RoutingStrategy { get; }
 
         // Summary:
         //     Associates another owner type with the routed event represented by a System.Windows.RoutedEvent

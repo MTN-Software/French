@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Roots xmlns="clr-namespace:Microsoft.Xaml.Tools.XamlCompiler.RootLog;assembly=Microsoft.Windows.UI.Xaml.81.Build.Tasks">
+<Roots >
   <Roots.PropertyPathNames>
     <RootPropertyPathName Name="ConjugateVerb" />
     <RootPropertyPathName Name="VerbTenses" />
@@ -9,6 +9,49 @@
   </Roots.PropertyPathNames>
   <Roots.RootTypes>
     <RootType FullName="Windows.UI.Xaml.Application" />
+    <RootType FullName="Windows.UI.Xaml.Controls.ContentDialog">
+      <RootProperty Name="Title" />
+      <RootProperty Name="PrimaryButtonText" />
+      <RootProperty Name="SecondaryButtonText" />
+      <RootProperty Name="Content" />
+      <RootEvent Name="PrimaryButtonClick" />
+      <RootEvent Name="SecondaryButtonClick" />
+    </RootType>
+    <RootType FullName="Windows.UI.Xaml.Controls.StackPanel">
+      <RootProperty Name="VerticalAlignment" />
+      <RootProperty Name="HorizontalAlignment" />
+      <RootProperty Name="Height" />
+      <RootProperty Name="Children" />
+    </RootType>
+    <RootType FullName="Windows.UI.Xaml.Controls.Grid">
+      <RootProperty Name="Height" />
+      <RootProperty Name="VerticalAlignment" />
+      <RootProperty Name="ColumnDefinitions" />
+      <RootProperty Name="RowDefinitions" />
+      <RootProperty Name="Children" />
+      <RootMethod Name="GetRow" />
+      <RootMethod Name="SetRow" />
+      <RootMethod Name="GetColumn" />
+      <RootMethod Name="SetColumn" />
+      <RootMethod Name="GetColumnSpan" />
+      <RootMethod Name="SetColumnSpan" />
+    </RootType>
+    <RootType FullName="Windows.UI.Xaml.Controls.ColumnDefinition">
+      <RootProperty Name="Width" />
+    </RootType>
+    <RootType FullName="Windows.UI.Xaml.Controls.RowDefinition">
+      <RootProperty Name="Height" />
+    </RootType>
+    <RootType FullName="Windows.UI.Xaml.Controls.RadioButton">
+      <RootProperty Name="Content" />
+    </RootType>
+    <RootType FullName="Windows.UI.Xaml.Controls.TextBox">
+      <RootProperty Name="VerticalAlignment" />
+      <RootProperty Name="Header" />
+      <RootProperty Name="Text" />
+      <RootProperty Name="Margin" />
+    </RootType>
+    <RootType FullName="French_Conjugations.EmailDialog" />
     <RootType FullName="Windows.UI.Xaml.Controls.Page">
       <RootProperty Name="Background" />
       <RootProperty Name="DataContext" />
@@ -25,32 +68,12 @@
       <RootProperty Name="Icon" />
       <RootProperty Name="Label" />
       <RootProperty Name="Command" />
+      <RootEvent Name="Click" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Data.Binding">
       <RootProperty Name="Path" />
       <RootProperty Name="Mode" />
       <RootProperty Name="UpdateSourceTrigger" />
-    </RootType>
-    <RootType FullName="Windows.UI.Xaml.Controls.Grid">
-      <RootProperty Name="RowDefinitions" />
-      <RootProperty Name="ColumnDefinitions" />
-      <RootProperty Name="Children" />
-      <RootMethod Name="GetRow" />
-      <RootMethod Name="SetRow" />
-      <RootMethod Name="GetColumn" />
-      <RootMethod Name="SetColumn" />
-      <RootMethod Name="GetColumnSpan" />
-      <RootMethod Name="SetColumnSpan" />
-    </RootType>
-    <RootType FullName="Windows.UI.Xaml.Controls.RowDefinition">
-      <RootProperty Name="Height" />
-    </RootType>
-    <RootType FullName="Windows.UI.Xaml.Controls.ColumnDefinition">
-      <RootProperty Name="Width" />
-    </RootType>
-    <RootType FullName="Windows.UI.Xaml.Controls.TextBox">
-      <RootProperty Name="Text" />
-      <RootProperty Name="Margin" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.TextBlock">
       <RootProperty Name="HorizontalAlignment" />

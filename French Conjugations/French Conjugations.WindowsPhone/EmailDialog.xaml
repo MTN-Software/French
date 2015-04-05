@@ -1,0 +1,39 @@
+﻿<ContentDialog
+    x:Class="French_Conjugations.EmailDialog"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:French_Conjugations"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Title="Email"
+    PrimaryButtonText="send"  
+    SecondaryButtonText="cancel"
+    PrimaryButtonClick="ContentDialog_PrimaryButtonClick"
+    SecondaryButtonClick="ContentDialog_SecondaryButtonClick">
+
+    <StackPanel VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Height="500">
+        <!--<TextBox x:Name="email" Header="Email address"/>-->
+        <Grid Height="500" VerticalAlignment="Stretch">
+            
+            <!--Column Definitions-->
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width=".75*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            
+            <!--Row Definitions-->
+            <Grid.RowDefinitions>
+                <RowDefinition Height="auto" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+            
+            <!--Content-->
+            <RadioButton x:Name="bug" Grid.Row="0" Grid.Column="0" Content="Bug" />
+            <RadioButton x:Name="suggest" Grid.Row="0" Grid.Column="1" Content="Suggestion" />
+            <RadioButton x:Name="other" Grid.Row="0" Grid.Column="2" Content="Other" />
+            <TextBox x:Name="message" VerticalAlignment="Stretch" Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="3" Header="Content of feedback" />
+        </Grid>
+    </StackPanel>
+</ContentDialog>

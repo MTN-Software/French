@@ -10,6 +10,8 @@ using Windows.Foundation.Collections;
 using Windows.Foundation.Metadata;
 using System.Reflection;
 using Windows.UI.Popups;
+using Windows.UI.Xaml.Navigation;
+using Windows.UI.Xaml.Controls;
 
 namespace French_Conjugations
 {
@@ -50,6 +52,7 @@ namespace French_Conjugations
         TenseViewModel _currentTense;
         string _selectedTense;
         List<string> _EtreHelpingVerbs;
+        private readonly NavigationHelper navigationHelper;
         #endregion
 
         #region Properties

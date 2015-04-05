@@ -16,12 +16,14 @@
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
     <Compile Include="$(MSBuildThisFileDirectory)Dependencies\CommandManager.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Dependencies\NavigationHelper.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Dependencies\ObservableObject.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Dependencies\PropertySupport.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Dependencies\RelayCommand.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Dependencies\RoutedEvent.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Dependencies\RoutingStrategy.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Dependencies\SerializeableAttribute.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Dependencies\SuspensionManager.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Model\TenseDatabase.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Model\Verb.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ViewModel\TenseViewModel.cs" />

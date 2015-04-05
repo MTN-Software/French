@@ -7,7 +7,7 @@
 
     For more information on package manifest files, see http://go.microsoft.com/fwlink/?LinkID=241727
   -->
-  <Identity Name="54132MTNSoftware.FrenchConjugationsBETA" Publisher="CN=18B5C38D-15AB-4A96-8550-558630DAFC8A" Version="1.1.0.1" ProcessorArchitecture="neutral" />
+  <Identity Name="54132MTNSoftware.FrenchConjugationsBETA" Publisher="CN=18B5C38D-15AB-4A96-8550-558630DAFC8A" Version="1.1.0.2" ProcessorArchitecture="neutral" />
   <mp:PhoneIdentity PhoneProductId="21713419-da25-4716-958a-bdf63ad1e99c" PhonePublisherId="00000000-0000-0000-0000-000000000000" />
   <Properties>
     <DisplayName>French Conjugations BETA</DisplayName>
@@ -43,7 +43,7 @@
     <build:Item Name="TargetFrameworkMoniker" Value="WindowsPhoneApp,Version=v8.1" />
     <build:Item Name="VisualStudio" Version="14.0" />
     <build:Item Name="VisualStudioEdition" Value="Microsoft Visual Studio Ultimate 2015 Preview" />
-    <build:Item Name="OperatingSystem" Version="10.0.10041.0 (fbl_impressive.150313-1821)" />
+    <build:Item Name="OperatingSystem" Version="10.0.10049.0 (fbl_impressive.150325-1700)" />
     <build:Item Name="Microsoft.Build.AppxPackage.dll" Version="14.0.22310.1" />
     <build:Item Name="ProjectGUID" Value="{77201770-284A-453A-9EB4-9C2817AC72B4}" />
     <build:Item Name="Microsoft.Windows.UI.Xaml.81.Build.Tasks.dll" Version="14.0.22310.1" />

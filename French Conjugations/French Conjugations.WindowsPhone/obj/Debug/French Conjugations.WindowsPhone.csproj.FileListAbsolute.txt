@@ -90,3 +90,9 @@ C:\Users\Thomas\Source\Repos\French\French Conjugations\French Conjugations.Wind
 C:\Users\Thomas\Source\Repos\French\French Conjugations\French Conjugations.WindowsPhone\obj\Debug\ilc\in\resources.pri
 C:\Users\Thomas\Source\Repos\French\French Conjugations\French Conjugations.WindowsPhone\obj\Debug\ilc\in\Assets\MarketplaceIcon.png
 C:\Users\Thomas\Source\Repos\French\French Conjugations\French Conjugations.WindowsPhone\obj\Debug\ilc\in\Assets\SplashScreenImage.png
+C:\Users\Thomas\Source\Repos\French\French Conjugations\French Conjugations.WindowsPhone\bin\Debug\EmailDialog.xbf
+C:\Users\Thomas\Source\Repos\French\French Conjugations\French Conjugations.WindowsPhone\obj\Debug\EmailDialog.g.i.cs
+C:\Users\Thomas\Source\Repos\French\French Conjugations\French Conjugations.WindowsPhone\obj\Debug\EmailDialog.g.cs
+C:\Users\Thomas\Source\Repos\French\French Conjugations\French Conjugations.WindowsPhone\obj\Debug\EmailDialog.xaml
+C:\Users\Thomas\Source\Repos\French\French Conjugations\French Conjugations.WindowsPhone\obj\Debug\EmailDialog.xbf
+C:\Users\Thomas\Source\Repos\French\French Conjugations\French Conjugations.WindowsPhone\obj\Debug\ilc\in\EmailDialog.xbf

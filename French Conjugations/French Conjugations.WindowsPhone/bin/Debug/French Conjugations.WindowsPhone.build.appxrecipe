@@ -55,6 +55,9 @@
     <AppxPackagedFile Include="C:\Users\Thomas\Source\Repos\French\French Conjugations\French Conjugations.WindowsPhone\bin\Debug\App.xbf">
       <PackagePath>App.xbf</PackagePath>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Thomas\Source\Repos\French\French Conjugations\French Conjugations.WindowsPhone\bin\Debug\EmailDialog.xbf">
+      <PackagePath>EmailDialog.xbf</PackagePath>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Thomas\Source\Repos\French\French Conjugations\French Conjugations.WindowsPhone\bin\Debug\MainPage.xbf">
       <PackagePath>MainPage.xbf</PackagePath>
     </AppxPackagedFile>

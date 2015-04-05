@@ -11,6 +11,7 @@
 "C:\Users\Thomas\Source\Repos\French\French Conjugations\French Conjugations.WindowsPhone\Assets\WideLogo.scale-240.png" "Assets\WideLogo.scale-240.png"
 "C:\Users\Thomas\Source\Repos\French\French Conjugations\French Conjugations.WindowsPhone\default.rd.xml" "default.rd.xml"
 "C:\Users\Thomas\Source\Repos\French\French Conjugations\French Conjugations.WindowsPhone\bin\Release\App.xbf" "App.xbf"
+"C:\Users\Thomas\Source\Repos\French\French Conjugations\French Conjugations.WindowsPhone\bin\Release\EmailDialog.xbf" "EmailDialog.xbf"
 "C:\Users\Thomas\Source\Repos\French\French Conjugations\French Conjugations.WindowsPhone\bin\Release\MainPage.xbf" "MainPage.xbf"
 "C:\Users\Thomas\Source\Repos\French\French Conjugations\French Conjugations.WindowsPhone\bin\Release\French Conjugations.WindowsPhone.xr.xml" "French Conjugations.WindowsPhone.xr.xml"
 "C:\Users\Thomas\Source\Repos\French\French Conjugations\French Conjugations.WindowsPhone\bin\Release\resources.pri" "resources.pri"

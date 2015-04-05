@@ -1,0 +1,24 @@
+﻿<ContentDialog x:ConnectionId='1'
+    x:Class="French_Conjugations.EmailDialog"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:French_Conjugations"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Title="Email"
+    PrimaryButtonText="send"  
+    SecondaryButtonText="cancel"
+                                                         
+                                                             >
+
+    <StackPanel VerticalAlignment="Stretch" HorizontalAlignment="Stretch">
+        <!--<TextBox x:Name="email" Header="Email address"/>-->
+        
+        <RadioButton x:Name="bug" Content="Bug" />
+        <RadioButton x:Name="suggest" Content="Suggestion" />
+        <RadioButton x:Name="other" Content="Other" />
+        <TextBox x:Name="message" Header="Content of feedback" />
+    </StackPanel>
+</ContentDialog>
+

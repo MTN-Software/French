@@ -45,3 +45,9 @@ C:\Users\Thomas\Source\Repos\French\French Conjugations\French Conjugations.Wind
 C:\Users\Thomas\Source\Repos\French\French Conjugations\French Conjugations.WindowsPhone\obj\Release\ilc\in\MainPage.xbf
 C:\Users\Thomas\Source\Repos\French\French Conjugations\French Conjugations.WindowsPhone\obj\Release\ilc\in\French Conjugations.WindowsPhone.xr.xml
 C:\Users\Thomas\Source\Repos\French\French Conjugations\French Conjugations.WindowsPhone\obj\Release\ilc\in\resources.pri
+C:\Users\Thomas\Source\Repos\French\French Conjugations\French Conjugations.WindowsPhone\bin\Release\EmailDialog.xbf
+C:\Users\Thomas\Source\Repos\French\French Conjugations\French Conjugations.WindowsPhone\obj\Release\EmailDialog.g.i.cs
+C:\Users\Thomas\Source\Repos\French\French Conjugations\French Conjugations.WindowsPhone\obj\Release\EmailDialog.g.cs
+C:\Users\Thomas\Source\Repos\French\French Conjugations\French Conjugations.WindowsPhone\obj\Release\EmailDialog.xaml
+C:\Users\Thomas\Source\Repos\French\French Conjugations\French Conjugations.WindowsPhone\obj\Release\EmailDialog.xbf
+C:\Users\Thomas\Source\Repos\French\French Conjugations\French Conjugations.WindowsPhone\obj\Release\ilc\in\EmailDialog.xbf

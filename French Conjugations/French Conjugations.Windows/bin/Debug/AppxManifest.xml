@@ -34,12 +34,12 @@
     <build:Item Name="SharedGUID" Value="0b476402-f7e8-4dc6-8146-275f72131019" />
     <build:Item Name="CodeSharingProject" Value="248F659F-DAC5-46E8-AC09-60EC9FC95053" />
     <build:Item Name="TargetFrameworkMoniker" Value=".NETCore,Version=v4.5.1" />
-    <build:Item Name="VisualStudio" Version="14.0" />
-    <build:Item Name="VisualStudioEdition" Value="Microsoft Visual Studio Ultimate 2015 Preview" />
-    <build:Item Name="OperatingSystem" Version="6.4.9879.0 (fbl_release.141103-1722)" />
-    <build:Item Name="Microsoft.Build.AppxPackage.dll" Version="14.0.22310.1" />
-    <build:Item Name="ProjectGUID" Value="64bcd544-25ce-4fcf-8734-ec8bb30be9bd" />
-    <build:Item Name="Microsoft.Windows.UI.Xaml.81.Build.Tasks.dll" Version="14.0.22310.1" />
+    <build:Item Name="VisualStudio" Version="12.0" />
+    <build:Item Name="VisualStudioEdition" Value="Microsoft Visual Studio Ultimate 2013" />
+    <build:Item Name="OperatingSystem" Version="10.0.10049.0 (fbl_impressive.150325-1700)" />
+    <build:Item Name="Microsoft.Build.AppxPackage.dll" Version="12.0.31101.0" />
+    <build:Item Name="ProjectGUID" Value="{64BCD544-25CE-4FCF-8734-EC8BB30BE9BD}" />
+    <build:Item Name="Microsoft.Windows.UI.Xaml.Build.Tasks.dll" Version="12.0.30501.0" />
     <build:Item Name="MakePri.exe" Version="6.3.9600.17298 (winblue.141024-1500)" />
   </build:Metadata>
 </Package>

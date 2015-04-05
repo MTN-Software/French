@@ -27,7 +27,10 @@ namespace French_Conjugations
             this.InitializeComponent();
 
             this.NavigationCacheMode = NavigationCacheMode.Required;
+            
         }
+
+        
 
         /// <summary>
         /// Invoked when this page is about to be displayed in a Frame.
@@ -43,6 +46,22 @@ namespace French_Conjugations
             // Windows.Phone.UI.Input.HardwareButtons.BackPressed event.
             // If you are using the NavigationHelper provided by some templates,
             // this event is handled for you.
+        }
+
+        /// <summary>
+        /// Navigates to email feedback page
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void mnuFeedback_Click(object sender, RoutedEventArgs e)
+        {
+            
+            if (!Frame.Navigate(typeof(EmailDialog)))
+            {
+                EmailDialog em = new EmailDialog();
+                em.ShowAsync();
+                //throw new Exception("Navigation error");
+            }
         }
 
     }

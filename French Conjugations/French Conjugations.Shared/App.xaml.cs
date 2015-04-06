@@ -7,6 +7,7 @@ using Windows.ApplicationModel;
 using Windows.ApplicationModel.Activation;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
+using Windows.Storage;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Controls.Primitives;
@@ -15,7 +16,10 @@ using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Media.Animation;
 using Windows.UI.Xaml.Navigation;
-
+using System.Threading;
+using System.Threading.Tasks;
+using Windows.ApplicationModel.Core;
+using Windows.UI.Core;
 // The Blank Application template is documented at http://go.microsoft.com/fwlink/?LinkId=234227
 
 namespace French_Conjugations
@@ -37,7 +41,10 @@ namespace French_Conjugations
         {
             this.InitializeComponent();
             this.Suspending += this.OnSuspending;
+            //this.isFirstRun();
         }
+
+        
 
         /// <summary>
         /// Invoked when the application is launched normally by the end user.  Other entry points
@@ -131,6 +138,7 @@ namespace French_Conjugations
             var deferral = e.SuspendingOperation.GetDeferral();
 
             // TODO: Save application state and stop any background activity
+            
             deferral.Complete();
         }
     }

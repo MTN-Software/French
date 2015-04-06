@@ -1,0 +1,96 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Machine>THOMAS</Machine>
+    <WindowsUser>Thomas</WindowsUser>
+    <TargetPlatformIdentifier>Windows</TargetPlatformIdentifier>
+    <SolutionConfiguration>Release|AnyCPU</SolutionConfiguration>
+    <PackageArchitecture>neutral</PackageArchitecture>
+    <PackageIdentityName>54132MTNSoftware.FrenchConjugationsBETA</PackageIdentityName>
+    <IntermediateOutputPath>C:\Users\Thomas\Source\Repos\French\French Conjugations\French Conjugations.Windows\obj\Release\</IntermediateOutputPath>
+    <RegisteredManifestChecksum>3D262027FC6FDC506433CCB484E5D08A09E135E8924871EB3EAB56D0C5E1BB11</RegisteredManifestChecksum>
+    <RegisteredPackageMoniker>54132MTNSoftware.FrenchConjugationsBETA_1.1.0.0_neutral__26b8zfcht8jpj</RegisteredPackageMoniker>
+    <RegisteredUserModeAppID>54132MTNSoftware.FrenchConjugationsBETA_26b8zfcht8jpj!App</RegisteredUserModeAppID>
+    <RegisteredPackageID>54132MTNSoftware.FrenchConjugationsBETA</RegisteredPackageID>
+    <RegisteredPackagePublisher>CN=18B5C38D-15AB-4A96-8550-558630DAFC8A</RegisteredPackagePublisher>
+    <RegisteredVersion>1.1.0.0</RegisteredVersion>
+    <JitOptimizationSuppressed>True</JitOptimizationSuppressed>
+  </PropertyGroup>
+  <ItemGroup>
+    <AppXManifest Include="C:\Users\Thomas\Source\Repos\French\French Conjugations\French Conjugations.Windows\bin\Release\AppxManifest.xml">
+      <PackagePath>AppxManifest.xml</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2015-04-06T06:07:37.603</Modified>
+    </AppXManifest>
+  </ItemGroup>
+  <ItemGroup>
+    <AppxPackagedFile Include="C:\Users\Thomas\Source\Repos\French\French Conjugations\French Conjugations.Windows\bin\Release\French Conjugations.Windows.exe">
+      <PackagePath>French Conjugations.Windows.exe</PackagePath>
+      <Modified>2015-04-06T06:07:31.526</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Thomas\Source\Repos\French\French Conjugations\French Conjugations.Windows\Assets\Logo.scale-30.png">
+      <PackagePath>Assets\Logo.scale-30.png</PackagePath>
+      <Modified>2015-04-06T03:40:18.049</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Thomas\Source\Repos\French\French Conjugations\French Conjugations.Windows\Assets\Logo.scale-90.png">
+      <PackagePath>Assets\Logo.scale-90.png</PackagePath>
+      <Modified>2015-04-06T03:38:57.132</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Thomas\Source\Repos\French\French Conjugations\French Conjugations.Windows\Assets\Logo.scale-70.png">
+      <PackagePath>Assets\Logo.scale-70.png</PackagePath>
+      <Modified>2015-04-06T03:38:10.052</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Thomas\Source\Repos\French\French Conjugations\French Conjugations.Windows\Assets\Logo.scale-100.png">
+      <PackagePath>Assets\Logo.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2015-04-06T03:00:16.251</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Thomas\Source\Repos\French\French Conjugations\French Conjugations.Windows\Assets\SmallLogo.scale-100.png">
+      <PackagePath>Assets\SmallLogo.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2015-04-06T03:40:18.049</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Thomas\Source\Repos\French\French Conjugations\French Conjugations.Windows\Assets\SplashScreen.scale-100.png">
+      <PackagePath>Assets\SplashScreen.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2015-04-06T03:31:26.447</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Thomas\Source\Repos\French\French Conjugations\French Conjugations.Windows\Assets\StoreLogo.scale-100.png">
+      <PackagePath>Assets\StoreLogo.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2015-04-06T03:04:17.750</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Thomas\Source\Repos\French\French Conjugations\French Conjugations.Windows\Assets\StoreLogo.scale-140.png">
+      <PackagePath>Assets\StoreLogo.scale-140.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2015-04-06T03:38:10.052</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Thomas\Source\Repos\French\French Conjugations\French Conjugations.Windows\Assets\StoreLogo.scale-180.png">
+      <PackagePath>Assets\StoreLogo.scale-180.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2015-04-06T03:38:57.132</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Thomas\Source\Repos\French\French Conjugations\French Conjugations.Windows\bin\Release\App.xbf">
+      <PackagePath>App.xbf</PackagePath>
+      <Modified>2015-04-02T03:40:52.705</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Thomas\Source\Repos\French\French Conjugations\French Conjugations.Windows\bin\Release\Feedback.xbf">
+      <PackagePath>Feedback.xbf</PackagePath>
+      <Modified>2015-04-06T04:31:00.533</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Thomas\Source\Repos\French\French Conjugations\French Conjugations.Windows\bin\Release\MainPage.xbf">
+      <PackagePath>MainPage.xbf</PackagePath>
+      <Modified>2015-04-06T04:31:00.534</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Thomas\Source\Repos\French\French Conjugations\French Conjugations.Windows\bin\Release\French Conjugations.Windows.xr.xml">
+      <PackagePath>French Conjugations.Windows.xr.xml</PackagePath>
+      <Modified>2015-04-06T03:13:06.552</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Thomas\Source\Repos\French\French Conjugations\French Conjugations.Windows\bin\Release\resources.pri">
+      <PackagePath>resources.pri</PackagePath>
+      <Modified>2015-04-06T06:07:37.451</Modified>
+    </AppxPackagedFile>
+  </ItemGroup>
+  <ItemGroup>
+  </ItemGroup>
+</Project>

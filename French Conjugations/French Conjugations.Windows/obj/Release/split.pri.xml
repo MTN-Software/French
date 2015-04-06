@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<PriInfo>
+	<ResourceMap name="54132MTNSoftware.FrenchConjugationsBETA" version="1.0" primary="true">
+		<Qualifiers>
+			<Scale>100</Scale>
+		</Qualifiers>
+		<ResourceMapSubtree name="Files">
+			<NamedResource name="App.xbf" uri="ms-resource://54132MTNSoftware.FrenchConjugationsBETA/Files/App.xbf">
+				<Candidate type="Path">
+					<Value>App.xbf</Value>
+				</Candidate>
+			</NamedResource>
+			<NamedResource name="Feedback.xbf" uri="ms-resource://54132MTNSoftware.FrenchConjugationsBETA/Files/Feedback.xbf">
+				<Candidate type="Path">
+					<Value>Feedback.xbf</Value>
+				</Candidate>
+			</NamedResource>
+			<NamedResource name="French Conjugations.Windows.xr.xml" uri="ms-resource://54132MTNSoftware.FrenchConjugationsBETA/Files/French%20Conjugations.Windows.xr.xml">
+				<Candidate type="Path">
+					<Value>French Conjugations.Windows.xr.xml</Value>
+				</Candidate>
+			</NamedResource>
+			<NamedResource name="MainPage.xbf" uri="ms-resource://54132MTNSoftware.FrenchConjugationsBETA/Files/MainPage.xbf">
+				<Candidate type="Path">
+					<Value>MainPage.xbf</Value>
+				</Candidate>
+			</NamedResource>
+			<ResourceMapSubtree name="Assets">
+				<NamedResource name="Logo.png" uri="ms-resource://54132MTNSoftware.FrenchConjugationsBETA/Files/Assets/Logo.png">
+					<Candidate qualifiers="Scale-100" isDefault="true" type="Path">
+						<Value>Assets\Logo.scale-100.png</Value>
+					</Candidate>
+				</NamedResource>
+				<NamedResource name="Logo.scale-30.png" uri="ms-resource://54132MTNSoftware.FrenchConjugationsBETA/Files/Assets/Logo.scale-30.png">
+					<Candidate type="Path">
+						<Value>Assets\Logo.scale-30.png</Value>
+					</Candidate>
+				</NamedResource>
+				<NamedResource name="Logo.scale-70.png" uri="ms-resource://54132MTNSoftware.FrenchConjugationsBETA/Files/Assets/Logo.scale-70.png">
+					<Candidate type="Path">
+						<Value>Assets\Logo.scale-70.png</Value>
+					</Candidate>
+				</NamedResource>
+				<NamedResource name="Logo.scale-90.png" uri="ms-resource://54132MTNSoftware.FrenchConjugationsBETA/Files/Assets/Logo.scale-90.png">
+					<Candidate type="Path">
+						<Value>Assets\Logo.scale-90.png</Value>
+					</Candidate>
+				</NamedResource>
+				<NamedResource name="SmallLogo.png" uri="ms-resource://54132MTNSoftware.FrenchConjugationsBETA/Files/Assets/SmallLogo.png">
+					<Candidate qualifiers="Scale-100" isDefault="true" type="Path">
+						<Value>Assets\SmallLogo.scale-100.png</Value>
+					</Candidate>
+				</NamedResource>
+				<NamedResource name="SplashScreen.png" uri="ms-resource://54132MTNSoftware.FrenchConjugationsBETA/Files/Assets/SplashScreen.png">
+					<Candidate qualifiers="Scale-100" isDefault="true" type="Path">
+						<Value>Assets\SplashScreen.scale-100.png</Value>
+					</Candidate>
+				</NamedResource>
+				<NamedResource name="StoreLogo.png" uri="ms-resource://54132MTNSoftware.FrenchConjugationsBETA/Files/Assets/StoreLogo.png">
+					<Candidate qualifiers="Scale-100" isDefault="true" type="Path">
+						<Value>Assets\StoreLogo.scale-100.png</Value>
+					</Candidate>
+				</NamedResource>
+			</ResourceMapSubtree>
+		</ResourceMapSubtree>
+	</ResourceMap>
+</PriInfo>

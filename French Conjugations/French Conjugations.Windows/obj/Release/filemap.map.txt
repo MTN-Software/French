@@ -1,0 +1,18 @@
+﻿[ResourceMetadata]
+"ResourceDimensions"		"scale-100"
+"ResourceDimensions"		"language-en-us"
+
+[Files]
+"C:\Users\Thomas\Source\Repos\French\French Conjugations\French Conjugations.Windows\obj\Release\filemap.pri"			"resources.pri"
+"C:\Users\Thomas\Source\Repos\French\French Conjugations\French Conjugations.Windows\obj\Release\PackageLayout\MainPage.xbf"			"MainPage.xbf"
+"C:\Users\Thomas\Source\Repos\French\French Conjugations\French Conjugations.Windows\obj\Release\PackageLayout\French Conjugations.Windows.xr.xml"			"French Conjugations.Windows.xr.xml"
+"C:\Users\Thomas\Source\Repos\French\French Conjugations\French Conjugations.Windows\obj\Release\PackageLayout\French Conjugations.Windows.exe"			"French Conjugations.Windows.exe"
+"C:\Users\Thomas\Source\Repos\French\French Conjugations\French Conjugations.Windows\obj\Release\PackageLayout\Feedback.xbf"			"Feedback.xbf"
+"C:\Users\Thomas\Source\Repos\French\French Conjugations\French Conjugations.Windows\obj\Release\PackageLayout\App.xbf"			"App.xbf"
+"C:\Users\Thomas\Source\Repos\French\French Conjugations\French Conjugations.Windows\obj\Release\PackageLayout\Assets\StoreLogo.scale-100.png"			"Assets\StoreLogo.scale-100.png"
+"C:\Users\Thomas\Source\Repos\French\French Conjugations\French Conjugations.Windows\obj\Release\PackageLayout\Assets\SplashScreen.scale-100.png"			"Assets\SplashScreen.scale-100.png"
+"C:\Users\Thomas\Source\Repos\French\French Conjugations\French Conjugations.Windows\obj\Release\PackageLayout\Assets\SmallLogo.scale-100.png"			"Assets\SmallLogo.scale-100.png"
+"C:\Users\Thomas\Source\Repos\French\French Conjugations\French Conjugations.Windows\obj\Release\PackageLayout\Assets\Logo.scale-90.png"			"Assets\Logo.scale-90.png"
+"C:\Users\Thomas\Source\Repos\French\French Conjugations\French Conjugations.Windows\obj\Release\PackageLayout\Assets\Logo.scale-70.png"			"Assets\Logo.scale-70.png"
+"C:\Users\Thomas\Source\Repos\French\French Conjugations\French Conjugations.Windows\obj\Release\PackageLayout\Assets\Logo.scale-30.png"			"Assets\Logo.scale-30.png"
+"C:\Users\Thomas\Source\Repos\French\French Conjugations\French Conjugations.Windows\obj\Release\PackageLayout\Assets\Logo.scale-100.png"			"Assets\Logo.scale-100.png"

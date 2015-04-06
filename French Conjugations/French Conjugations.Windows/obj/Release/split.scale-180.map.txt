@@ -1,0 +1,7 @@
+﻿[ResourceMetadata]
+"ResourceId"			"split.scale-180"
+"ResourceDimensions"		"scale-180"
+
+[Files]
+"C:\Users\Thomas\Source\Repos\French\French Conjugations\French Conjugations.Windows\obj\Release\split.scale-180.pri"			"resources.pri"
+"C:\Users\Thomas\Source\Repos\French\French Conjugations\French Conjugations.Windows\obj\Release\PackageLayout\Assets\StoreLogo.scale-180.png"			"Assets\StoreLogo.scale-180.png"

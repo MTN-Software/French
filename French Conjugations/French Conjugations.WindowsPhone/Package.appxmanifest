@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Package xmlns="http://schemas.microsoft.com/appx/2010/manifest" xmlns:m2="http://schemas.microsoft.com/appx/2013/manifest" xmlns:m3="http://schemas.microsoft.com/appx/2014/manifest" xmlns:mp="http://schemas.microsoft.com/appx/2014/phone/manifest">
-  <Identity Name="54132MTNSoftware.FrenchConjugationsBETA" Publisher="CN=18B5C38D-15AB-4A96-8550-558630DAFC8A" Version="1.1.0.2" />
+  <Identity Name="54132MTNSoftware.FrenchConjugationsBETA" Publisher="CN=18B5C38D-15AB-4A96-8550-558630DAFC8A" Version="1.1.0.5" />
   <mp:PhoneIdentity PhoneProductId="21713419-da25-4716-958a-bdf63ad1e99c" PhonePublisherId="00000000-0000-0000-0000-000000000000" />
   <Properties>
     <DisplayName>French Conjugations BETA</DisplayName>
@@ -16,7 +16,7 @@
   </Resources>
   <Applications>
     <Application Id="App" Executable="$targetnametoken$.exe" EntryPoint="French_Conjugations.WindowsPhone.App">
-      <m3:VisualElements DisplayName="French Conjugations BETA" Square150x150Logo="Assets\Logo.png" Square44x44Logo="Assets\SmallLogo.png" Description="Now backed using MTN VerbSense!  This is a beta version of the current &quot;French Conjugator&quot; app.  Because of the current overhaul, there may be some errors so please don't hesitate to send suggestions or bug reports.  Purchasing the paid version helps support us and allows us to develop new features and software quicker. To send bug reports or feature suggestions use the email: thomas@mtnsoftware.net" ForegroundText="light" BackgroundColor="transparent">
+      <m3:VisualElements DisplayName="French Conjugations BETA" Square150x150Logo="Assets\Logo.png" Square44x44Logo="Assets\SmallLogo.png" Description="Now backed using MTN VerbSense!  This is a beta version of the current &quot;French Conjugator&quot; app.  Because of the current overhaul, there may be some errors so please don't hesitate to send suggestions or bug reports.  Purchasing the paid version helps support us and allows us to develop new features and software quicker." ForegroundText="light" BackgroundColor="transparent">
         <m3:DefaultTile Wide310x150Logo="Assets\WideLogo.png" Square71x71Logo="Assets\Square71x71Logo.png">
         </m3:DefaultTile>
         <m3:SplashScreen Image="Assets\SplashScreen.png" />

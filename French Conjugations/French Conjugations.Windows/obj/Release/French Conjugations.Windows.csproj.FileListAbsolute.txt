@@ -30,3 +30,10 @@ C:\Users\Thomas\Source\Repos\French\French Conjugations\French Conjugations.Wind
 C:\Users\Thomas\Source\Repos\French\French Conjugations\French Conjugations.Windows\obj\Release\qualifiers.txt.intermediate
 C:\Users\Thomas\Source\Repos\French\French Conjugations\French Conjugations.Windows\obj\Release\MultipleQualifiersPerDimensionFound.txt
 C:\Users\Thomas\Source\Repos\French\French Conjugations\French Conjugations.Windows\obj\Release\ProjectArchitectures.txt
+C:\Users\Thomas\Source\Repos\French\French Conjugations\French Conjugations.Windows\bin\Release\Feedback.xbf
+C:\Users\Thomas\Source\Repos\French\French Conjugations\French Conjugations.Windows\obj\Release\Feedback.g.i.cs
+C:\Users\Thomas\Source\Repos\French\French Conjugations\French Conjugations.Windows\obj\Release\Feedback.g.cs
+C:\Users\Thomas\Source\Repos\French\French Conjugations\French Conjugations.Windows\obj\Release\Feedback.xaml
+C:\Users\Thomas\Source\Repos\French\French Conjugations\French Conjugations.Windows\obj\Release\Feedback.xbf
+C:\Users\Thomas\Source\Repos\French\French Conjugations\French Conjugations.Windows\bin\Release\French Conjugations.Windows.exe.CodeAnalysisLog.xml
+C:\Users\Thomas\Source\Repos\French\French Conjugations\French Conjugations.Windows\bin\Release\French Conjugations.Windows.exe.lastcodeanalysissucceeded

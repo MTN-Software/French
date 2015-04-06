@@ -9,24 +9,33 @@
     <Page.DataContext>
         <local:VerbViewModel/>
     </Page.DataContext>
+    <Page.BottomAppBar>
+        <CommandBar>
+            <CommandBar.PrimaryCommands>
+                <AppBarButton Icon="ReShare" Label="Conjugate" Command="{Binding Path=ConjugateVerb}"/>
+            </CommandBar.PrimaryCommands>
+            <CommandBar.SecondaryCommands>
+                <AppBarButton Icon="Comment" Label="Feedback" x:Name="mnuFeedback" Click="mnuFeedback_Click" />
+            </CommandBar.SecondaryCommands>
+        </CommandBar>
+    </Page.BottomAppBar>
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
         <Grid.RowDefinitions>
             <RowDefinition Height="40"/>
-            <RowDefinition Height="14"/>
             <RowDefinition Height="59"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*"/>
             <ColumnDefinition Width="*"/>
-            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="auto"/>
         </Grid.ColumnDefinitions>
+        <Popup Loaded="Popup_Loaded" x:Name="popupFeedback" LostFocus="popupFeedback_LostFocus">
+            <Grid Background="Black" x:Name="gdChild" Height="auto" Width="auto"/>
+        </Popup>
         <TextBox x:Name="textBox" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" TextWrapping="Wrap" Text="{Binding VerbInput, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" FontFamily="Global User Interface" Margin="0,0,10,0"/>
         <Button x:Name="btnConj" Grid.Row="0" Grid.Column="2" Content="Conjugate" HorizontalAlignment="Stretch"  Command="{Binding ConjugateVerb}" FontFamily="Global User Interface" Margin="7,1,0,1"/>
-        <TextBlock x:Name="txtInput" Grid.Row="1" Grid.Column="0" HorizontalAlignment="Center" TextWrapping="Wrap" Text="{Binding Path=VerbCurrentTense}"/>
-        <TextBlock x:Name="txtInf" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Center" TextWrapping="Wrap" Text="{Binding VerbInfinitive}"/>
-        <TextBlock x:Name="txtSub" Grid.Row="1" Grid.Column="2" HorizontalAlignment="Center" TextWrapping="Wrap" Text="{Binding VerbSubject, UpdateSourceTrigger=Explicit}"/>
-        <TextBlock x:Name="txtFinal" Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="3" HorizontalAlignment="Center" VerticalAlignment="Top" FontSize="48" Text="{Binding VerbFinalForm}"/>
+        <TextBlock x:Name="txtFinal" Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="3" HorizontalAlignment="Center" VerticalAlignment="Top" FontSize="48" Text="{Binding VerbFinalForm}"/>
         <ListBox x:Name="listTense" Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="3" VerticalAlignment="Top" FontSize="36" Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" Foreground="{ThemeResource ApplicationForegroundThemeBrush}" ItemsSource="{Binding Path=VerbTenses}" SelectedItem="{Binding Path=SelectTense, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
     </Grid>
 </Page>

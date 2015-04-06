@@ -62,3 +62,8 @@ C:\Users\Thomas\Source\Repos\French\French Conjugations\French Conjugations.Wind
 C:\Users\Thomas\Source\Repos\French\French Conjugations\French Conjugations.Windows\obj\Debug\qualifiers.txt.intermediate
 C:\Users\Thomas\Source\Repos\French\French Conjugations\French Conjugations.Windows\obj\Debug\MultipleQualifiersPerDimensionFound.txt
 C:\Users\Thomas\Source\Repos\French\French Conjugations\French Conjugations.Windows\obj\Debug\ProjectArchitectures.txt
+C:\Users\Thomas\Source\Repos\French\French Conjugations\French Conjugations.Windows\bin\Debug\Feedback.xbf
+C:\Users\Thomas\Source\Repos\French\French Conjugations\French Conjugations.Windows\obj\Debug\Feedback.g.i.cs
+C:\Users\Thomas\Source\Repos\French\French Conjugations\French Conjugations.Windows\obj\Debug\Feedback.g.cs
+C:\Users\Thomas\Source\Repos\French\French Conjugations\French Conjugations.Windows\obj\Debug\Feedback.xaml
+C:\Users\Thomas\Source\Repos\French\French Conjugations\French Conjugations.Windows\obj\Debug\Feedback.xbf

@@ -6,7 +6,7 @@
     <TargetPlatformIdentifier>Windows</TargetPlatformIdentifier>
     <SolutionConfiguration>Release|AnyCPU</SolutionConfiguration>
     <PackageArchitecture>neutral</PackageArchitecture>
-    <PackageIdentityName>eebd510d-c508-4696-87bc-2d28449ec465</PackageIdentityName>
+    <PackageIdentityName>54132MTNSoftware.FrenchConjugationsBETA</PackageIdentityName>
     <IntermediateOutputPath>C:\Users\Thomas\Source\Repos\French\French Conjugations\French Conjugations.Windows\obj\Release\</IntermediateOutputPath>
   </PropertyGroup>
   <ItemGroup>
@@ -18,6 +18,15 @@
   <ItemGroup>
     <AppxPackagedFile Include="C:\Users\Thomas\Source\Repos\French\French Conjugations\French Conjugations.Windows\bin\Release\French Conjugations.Windows.exe">
       <PackagePath>French Conjugations.Windows.exe</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Thomas\Source\Repos\French\French Conjugations\French Conjugations.Windows\Assets\Logo.scale-30.png">
+      <PackagePath>Assets\Logo.scale-30.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Thomas\Source\Repos\French\French Conjugations\French Conjugations.Windows\Assets\Logo.scale-90.png">
+      <PackagePath>Assets\Logo.scale-90.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Thomas\Source\Repos\French\French Conjugations\French Conjugations.Windows\Assets\Logo.scale-70.png">
+      <PackagePath>Assets\Logo.scale-70.png</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Thomas\Source\Repos\French\French Conjugations\French Conjugations.Windows\Assets\Logo.scale-100.png">
       <PackagePath>Assets\Logo.scale-100.png</PackagePath>
@@ -35,8 +44,19 @@
       <PackagePath>Assets\StoreLogo.scale-100.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Thomas\Source\Repos\French\French Conjugations\French Conjugations.Windows\Assets\StoreLogo.scale-140.png">
+      <PackagePath>Assets\StoreLogo.scale-140.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Thomas\Source\Repos\French\French Conjugations\French Conjugations.Windows\Assets\StoreLogo.scale-180.png">
+      <PackagePath>Assets\StoreLogo.scale-180.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Thomas\Source\Repos\French\French Conjugations\French Conjugations.Windows\bin\Release\App.xbf">
       <PackagePath>App.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Thomas\Source\Repos\French\French Conjugations\French Conjugations.Windows\bin\Release\Feedback.xbf">
+      <PackagePath>Feedback.xbf</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Thomas\Source\Repos\French\French Conjugations\French Conjugations.Windows\bin\Release\MainPage.xbf">
       <PackagePath>MainPage.xbf</PackagePath>

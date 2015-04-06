@@ -38,6 +38,9 @@
     <AppxPackagedFile Include="C:\Users\Thomas\Source\Repos\French\French Conjugations\French Conjugations.Windows\bin\Debug\App.xbf">
       <PackagePath>App.xbf</PackagePath>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Thomas\Source\Repos\French\French Conjugations\French Conjugations.Windows\bin\Debug\Feedback.xbf">
+      <PackagePath>Feedback.xbf</PackagePath>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Thomas\Source\Repos\French\French Conjugations\French Conjugations.Windows\bin\Debug\MainPage.xbf">
       <PackagePath>MainPage.xbf</PackagePath>
     </AppxPackagedFile>

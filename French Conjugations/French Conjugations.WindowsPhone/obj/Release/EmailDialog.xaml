@@ -12,13 +12,29 @@
                                                          
                                                              >
 
-    <StackPanel VerticalAlignment="Stretch" HorizontalAlignment="Stretch">
+    <StackPanel VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Height="500">
         <!--<TextBox x:Name="email" Header="Email address"/>-->
-        
-        <RadioButton x:Name="bug" Content="Bug" />
-        <RadioButton x:Name="suggest" Content="Suggestion" />
-        <RadioButton x:Name="other" Content="Other" />
-        <TextBox x:Name="message" Header="Content of feedback" />
+        <Grid Height="500" VerticalAlignment="Stretch">
+            
+            <!--Column Definitions-->
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width=".75*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            
+            <!--Row Definitions-->
+            <Grid.RowDefinitions>
+                <RowDefinition Height="auto" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+            
+            <!--Content-->
+            <RadioButton x:Name="bug" Grid.Row="0" Grid.Column="0" Content="Bug" />
+            <RadioButton x:Name="suggest" Grid.Row="0" Grid.Column="1" Content="Suggestion" />
+            <RadioButton x:Name="other" Grid.Row="0" Grid.Column="2" Content="Other" />
+            <TextBox x:Name="message" VerticalAlignment="Stretch" Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="3" Header="Content of feedback" />
+        </Grid>
     </StackPanel>
 </ContentDialog>
 

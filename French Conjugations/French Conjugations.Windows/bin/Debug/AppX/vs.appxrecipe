@@ -8,7 +8,7 @@
     <PackageArchitecture>neutral</PackageArchitecture>
     <PackageIdentityName>eebd510d-c508-4696-87bc-2d28449ec465</PackageIdentityName>
     <IntermediateOutputPath>C:\Users\Thomas\Source\Repos\French\French Conjugations\French Conjugations.Windows\obj\Debug\</IntermediateOutputPath>
-    <RegisteredManifestChecksum>21F4432E9F604EC05EDC3A5FEB4BD3C19BA6ECA8D846994D7B72EEEC98803509</RegisteredManifestChecksum>
+    <RegisteredManifestChecksum>013B7E4B13BB04FF08DCB03887C415E4AB6E39FEF70C7F727029F9B4E88C549C</RegisteredManifestChecksum>
     <RegisteredPackageMoniker>eebd510d-c508-4696-87bc-2d28449ec465_1.0.0.0_neutral__xkj04xcm6e7n4</RegisteredPackageMoniker>
     <RegisteredUserModeAppID>eebd510d-c508-4696-87bc-2d28449ec465_xkj04xcm6e7n4!App</RegisteredUserModeAppID>
     <RegisteredPackageID>eebd510d-c508-4696-87bc-2d28449ec465</RegisteredPackageID>
@@ -20,13 +20,13 @@
     <AppXManifest Include="C:\Users\Thomas\Source\Repos\French\French Conjugations\French Conjugations.Windows\bin\Debug\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2015-01-02T04:48:25.189</Modified>
+      <Modified>2015-04-06T02:39:36.227</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\Users\Thomas\Source\Repos\French\French Conjugations\French Conjugations.Windows\bin\Debug\French Conjugations.Windows.exe">
       <PackagePath>French Conjugations.Windows.exe</PackagePath>
-      <Modified>2015-01-02T05:40:57.437</Modified>
+      <Modified>2015-04-06T02:39:35.858</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Thomas\Source\Repos\French\French Conjugations\French Conjugations.Windows\Assets\Logo.scale-100.png">
       <PackagePath>Assets\Logo.scale-100.png</PackagePath>
@@ -52,17 +52,21 @@
       <PackagePath>App.xbf</PackagePath>
       <Modified>2014-12-08T02:23:56.312</Modified>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Thomas\Source\Repos\French\French Conjugations\French Conjugations.Windows\bin\Debug\Feedback.xbf">
+      <PackagePath>Feedback.xbf</PackagePath>
+      <Modified>2015-04-06T02:39:35.553</Modified>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Thomas\Source\Repos\French\French Conjugations\French Conjugations.Windows\bin\Debug\MainPage.xbf">
       <PackagePath>MainPage.xbf</PackagePath>
-      <Modified>2015-01-02T05:36:46.385</Modified>
+      <Modified>2015-04-06T02:39:35.553</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Thomas\Source\Repos\French\French Conjugations\French Conjugations.Windows\bin\Debug\French Conjugations.Windows.xr.xml">
       <PackagePath>French Conjugations.Windows.xr.xml</PackagePath>
-      <Modified>2015-01-02T05:36:46.363</Modified>
+      <Modified>2015-04-06T01:20:52.934</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Thomas\Source\Repos\French\French Conjugations\French Conjugations.Windows\bin\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2015-01-02T04:48:25.012</Modified>
+      <Modified>2015-04-06T02:39:36.063</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>

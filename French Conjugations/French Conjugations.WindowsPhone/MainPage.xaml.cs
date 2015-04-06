@@ -12,6 +12,10 @@ using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
+using Windows.Storage;
+using Windows.UI.Core;
+using Windows.ApplicationModel.Core;
+using System.Threading.Tasks;
 
 // The Blank Page item template is documented at http://go.microsoft.com/fwlink/?LinkId=234238
 
@@ -27,6 +31,8 @@ namespace French_Conjugations
             this.InitializeComponent();
 
             this.NavigationCacheMode = NavigationCacheMode.Required;
+
+            this.isFirstRun();
             
         }
 
@@ -46,6 +52,57 @@ namespace French_Conjugations
             // Windows.Phone.UI.Input.HardwareButtons.BackPressed event.
             // If you are using the NavigationHelper provided by some templates,
             // this event is handled for you.
+            
+        }
+
+        private async Task<bool> isFirstRun()
+        {
+#if DEBUG
+            ApplicationData.Current.LocalSettings.Values["ranBefore"] = false;
+#endif
+            bool ranBefore;
+            try
+            {
+                ranBefore = ApplicationData.Current.LocalSettings.Values["ranBefore"].Equals(true);
+            }
+            catch (Exception)
+            {
+                ApplicationData.Current.LocalSettings.Values.Add("ranBefore", false);
+                ranBefore = false;
+            }
+            
+            await CoreApplication.MainView.CoreWindow.Dispatcher.RunAsync(CoreDispatcherPriority.Normal, new Windows.UI.Core.DispatchedHandler(async () =>
+            {
+                if (!ranBefore)
+                {
+                    try
+                    {
+                        Windows.UI.Popups.MessageDialog msg = new Windows.UI.Popups.MessageDialog("")
+                        {
+                            Title = "Hi there!",
+                            Content = string.Concat("Thank you for participating in the MTN French Conjugations Beta! ",
+                            "Right now it might be a little less than expected however features are subject to change. ",
+                            "This would be the perfect time to submit any feedback using the built-in feedback feature."),
+                            Options = Windows.UI.Popups.MessageDialogOptions.None
+                        };
+                        await msg.ShowAsync();
+                        ApplicationData.Current.LocalSettings.Values["ranBefore"] = true;
+
+                    }
+                    catch (Exception ex)
+                    {
+                        Windows.UI.Popups.MessageDialog msg = new Windows.UI.Popups.MessageDialog(ex.Message);
+                        msg.ShowAsync();
+                        throw ex;
+                        //return false;
+                    }
+                }
+                else
+                {
+
+                }
+            }));
+            return true;
         }
 
         /// <summary>

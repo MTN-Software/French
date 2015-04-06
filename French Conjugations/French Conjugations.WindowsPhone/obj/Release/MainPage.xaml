@@ -16,7 +16,7 @@
                 <AppBarButton Icon="ReShare" Label="Conjugate" Command="{Binding Path=ConjugateVerb}"/>
             </CommandBar.PrimaryCommands>
             <CommandBar.SecondaryCommands>
-                
+                <AppBarButton x:ConnectionId='1' Label="Feedback" x:Name="mnuFeedback"                           />
             </CommandBar.SecondaryCommands>
         </CommandBar>
     </Page.BottomAppBar>

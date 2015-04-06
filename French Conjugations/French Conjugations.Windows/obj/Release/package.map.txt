@@ -1,0 +1,12 @@
+[Files]
+"C:\Users\Thomas\Source\Repos\French\French Conjugations\French Conjugations.Windows\bin\Release\AppxManifest.xml" "AppxManifest.xml"
+"C:\Users\Thomas\Source\Repos\French\French Conjugations\French Conjugations.Windows\bin\Release\French Conjugations.Windows.exe" "French Conjugations.Windows.exe"
+"C:\Users\Thomas\Source\Repos\French\French Conjugations\French Conjugations.Windows\Assets\Logo.scale-100.png" "Assets\Logo.scale-100.png"
+"C:\Users\Thomas\Source\Repos\French\French Conjugations\French Conjugations.Windows\Assets\SmallLogo.scale-100.png" "Assets\SmallLogo.scale-100.png"
+"C:\Users\Thomas\Source\Repos\French\French Conjugations\French Conjugations.Windows\Assets\SplashScreen.scale-100.png" "Assets\SplashScreen.scale-100.png"
+"C:\Users\Thomas\Source\Repos\French\French Conjugations\French Conjugations.Windows\Assets\StoreLogo.scale-100.png" "Assets\StoreLogo.scale-100.png"
+"C:\Users\Thomas\Source\Repos\French\French Conjugations\French Conjugations.Windows\bin\Release\App.xbf" "App.xbf"
+"C:\Users\Thomas\Source\Repos\French\French Conjugations\French Conjugations.Windows\bin\Release\Feedback.xbf" "Feedback.xbf"
+"C:\Users\Thomas\Source\Repos\French\French Conjugations\French Conjugations.Windows\bin\Release\MainPage.xbf" "MainPage.xbf"
+"C:\Users\Thomas\Source\Repos\French\French Conjugations\French Conjugations.Windows\bin\Release\French Conjugations.Windows.xr.xml" "French Conjugations.Windows.xr.xml"
+"C:\Users\Thomas\Source\Repos\French\French Conjugations\French Conjugations.Windows\bin\Release\resources.pri" "resources.pri"

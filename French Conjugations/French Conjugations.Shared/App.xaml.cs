@@ -30,6 +30,13 @@ namespace French_Conjugations
     public sealed partial class App : Application
     {
 #if WINDOWS_PHONE_APP
+        // http://go.microsoft.com/fwlink/?LinkId=290986&clcid=0x409
+        public static Microsoft.WindowsAzure.MobileServices.MobileServiceClient mtnsoftwareClient = new Microsoft.WindowsAzure.MobileServices.MobileServiceClient(
+        "https://mtnsoftware.azure-mobile.net/",
+        "WRMYCsJgbwiLQztSxeqmQfsbzQBOap79");
+#endif
+
+#if WINDOWS_PHONE_APP
         private TransitionCollection transitions;
 #endif
 

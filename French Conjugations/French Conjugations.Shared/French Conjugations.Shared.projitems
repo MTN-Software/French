@@ -24,6 +24,7 @@
     <Compile Include="$(MSBuildThisFileDirectory)Dependencies\RoutingStrategy.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Dependencies\SerializeableAttribute.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Dependencies\SuspensionManager.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Model\Irregular.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Model\TenseDatabase.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Model\Verb.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ViewModel\TenseViewModel.cs" />

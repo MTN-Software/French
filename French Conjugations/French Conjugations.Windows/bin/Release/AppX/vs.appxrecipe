@@ -20,13 +20,13 @@
     <AppXManifest Include="C:\Users\Thomas\Source\Repos\French\French Conjugations\French Conjugations.Windows\bin\Release\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2015-04-06T06:07:37.603</Modified>
+      <Modified>2015-04-26T05:44:59.610</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\Users\Thomas\Source\Repos\French\French Conjugations\French Conjugations.Windows\bin\Release\French Conjugations.Windows.exe">
       <PackagePath>French Conjugations.Windows.exe</PackagePath>
-      <Modified>2015-04-06T06:07:31.526</Modified>
+      <Modified>2015-04-26T06:13:10.864</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Thomas\Source\Repos\French\French Conjugations\French Conjugations.Windows\Assets\Logo.scale-30.png">
       <PackagePath>Assets\Logo.scale-30.png</PackagePath>
@@ -88,7 +88,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Thomas\Source\Repos\French\French Conjugations\French Conjugations.Windows\bin\Release\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2015-04-06T06:07:37.451</Modified>
+      <Modified>2015-04-26T05:44:59.423</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>

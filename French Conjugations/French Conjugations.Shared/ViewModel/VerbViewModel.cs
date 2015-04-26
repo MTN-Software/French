@@ -38,8 +38,14 @@ namespace French_Conjugations
                 _sTenses.Add(_database[i]);
             }
 
+            _irregular = new Irregular();
+
             _EtreHelpingVerbs = new List<string>();
-            //TODO: add list initializer
+            foreach (var item in _etreInPC)
+            {
+                _EtreHelpingVerbs.Add(item);
+            }
+            
         }
         #endregion
 
@@ -53,6 +59,37 @@ namespace French_Conjugations
         string _selectedTense;
         List<string> _EtreHelpingVerbs;
         private readonly NavigationHelper navigationHelper;
+        Irregular _irregular;
+
+        // verbs that use etre in the passe compose
+        string[] _etreInPC = {"devenir", "revenir", "monter", "rester", "sortir", "passer", "venir", 
+                            "aller", "naître", "descendre", "entrer", "retourner","tomber", "rentrer",
+                            "arriver", "mourir", "partir", "décéder"};
+
+        // verbs that are conjugated irregularly in PC
+        string[] _irregInPC = {"acquérir", "apprendre", "atteindre", "attendre", "avoir", "battre", 
+                                "boire", "comprendre", "conduire", "connaître", "construire", "courir", 
+                                "couvrir", "craindre", "croire", "décevoir", "découvrir", "devoir", "dire", 
+                                "écrire", "être", "faire", "fondre", "instruire", "joindre", "lire", "mettre", 
+                                "offrir", "ouvrir", "paraître", "peindre", "pouvoir", "prendre", "produire", 
+                                "recevoir", "savoir", "souffrir", "surprendre", "suivre", "tenir", 
+                                "venir", "vivre", "voir", "vouloir"};
+
+        // corresponding conjugations
+        string[] _irregPCConj = {"acquis", "appris", "atteint", "attendu", "eu", "battu", "bu", "compris", 
+                                "conduit", "connu", "construit", "couru", "couvert", "craint", "cru", "déçu", 
+                                "découvert", "dû", "dit", "écrit", "été", "fait", "fondu", "instruit", "joint", 
+                                "lu", "mis", "offert", "ouvert", "paru", "peint", "pu", "pris", "produit", 
+                                "reçu", "su", "souffert", "surpris", "suivi", "tenu", "venu", "vécu", "vu", 
+                                "voulu" };
+
+        // avoir conjugations
+        string[] _avoir = { "ai", "as", "a", "avons", "avez", "ont" };
+
+        // etre conjugations
+        string etre = "être";
+        string[] _etre = { "suis", "es", "est", "sommes", "êtes", "sont"};
+
         #endregion
 
         #region Properties
@@ -388,20 +425,35 @@ namespace French_Conjugations
         /// <returns></returns>
         private Tuple<string, string> PasseConj(string infinitive)
         {
-            //msgShow(); // temporary cover
+            string newRoot = string.Empty;
             string append = string.Empty;
             string helping = string.Empty;
-            //return append;
+            string input = Verb.VerbInfinitive;
+
             bool isEtreIrreg = false;       // default value is false
-            foreach (string vInf in _EtreHelpingVerbs)  // determine if the verb uses etre in p.c.
+            bool isVerbIrreg = false;       // default value is false
+            
+
+            for(int _index = 0; _index < _etreInPC.Length; _index++)
             {
-                if ((isEtreIrreg = (infinitive == vInf) ? true : false))    // if it is, then break out of the loop
+                isEtreIrreg = (input == _etreInPC[_index]) ? true : false;
+                if (isEtreIrreg)
                 {
                     break;
                 }
-
             }
 
+            for (int _index = 0; _index < _irregInPC.Length; _index++)
+            {
+                isVerbIrreg = (input == _irregInPC[_index]) ? true : false;
+                if (isVerbIrreg)
+                {
+                    newRoot = _irregPCConj[_index];
+                    break;
+                }
+            }
+
+            string[] helpingVerb = isEtreIrreg ? _etre : _avoir;
             Verb backupVerb = Verb;                                             // backs up the original verb
             string tempSub = Verb.VerbSubject;                                  // backs up the original verb subject
             Verb tempVerb = Verb;                                               // creates clone of the Verb
@@ -431,7 +483,7 @@ namespace French_Conjugations
             
             SelectTense = "Passé composé";                                      // resets tense to infinitive
             tempVerb.VerbSubject = tempSub;                                     // resets subject to the orinial subject
-
+            Verb = backupVerb;                                                  // restores verb
             switch (Verb.VerbEnding)
             {
                 case "er":
@@ -440,36 +492,36 @@ namespace French_Conjugations
                     {
                         case "je":
                             append = "é";
-                            helping = "ai";
+                            helping = helpingVerb[0];
                             break;
                         case "tu":
                             append = "é";
-                            helping = "as";
+                            helping = helpingVerb[1];
                             break;
                         case "il":  
                         case "on":
                             append = "é";
-                            helping = "a";
+                            helping = helpingVerb[2];
                             break;
                         case "elle":
                             append = "ée";
-                            helping = "a";
+                            helping = helpingVerb[2];
                             break;
                         case "nous":
                             append = "é(e)s";
-                            helping = "avons";
+                            helping = helpingVerb[3];
                             break;
                         case "vous":
                             append = "é(e)(s)";
-                            helping = "avez";
+                            helping = helpingVerb[4];
                             break;
                         case "ils":
                             append = "és";
-                            helping = "ont";
+                            helping = helpingVerb[5];
                             break;
                         case "elles":
                             append = "ées";
-                            helping = "ont";
+                            helping = helpingVerb[5];
                             break;
                         default:
                             break;
@@ -481,30 +533,30 @@ namespace French_Conjugations
                     {
                         case "je":
                             append = "u";
-                            helping = "ai";
+                            helping = helpingVerb[0];
                             break;
                         case "tu":
                             append = "u";
-                            helping = "as";
+                            helping = helpingVerb[1];
                             break;
                         case "il":
                         case "elle":
                         case "on":
                             append = "u";
-                            helping = "a";
+                            helping = helpingVerb[2];
                             break;
                         case "nous":
                             append = "u";
-                            helping = "avons";
+                            helping = helpingVerb[3];
                             break;
                         case "vous":
                             append = "u";
-                            helping = "avez";
+                            helping = helpingVerb[4];
                             break;
                         case "ils":
                         case "elles":
                             append = "u";
-                            helping = "ont";
+                            helping = helpingVerb[5];
                             break;
                         default:
                             break;
@@ -516,30 +568,30 @@ namespace French_Conjugations
                     {
                         case "je":
                             append = "i";
-                            helping = "ai";
+                            helping = helpingVerb[0];
                             break;
                         case "tu":
                             append = "i";
-                            helping = "as";
+                            helping = helpingVerb[1];
                             break;
                         case "il":
                         case "elle":
                         case "on":
                             append = "i";
-                            helping = "a";
+                            helping = helpingVerb[2];
                             break;
                         case "nous":
                             append = "i";
-                            helping = "avons";
+                            helping = helpingVerb[3];
                             break;
                         case "vous":
                             append = "i";
-                            helping = "avez";
+                            helping = helpingVerb[4];
                             break;
                         case "ils":
                         case "elles":
                             append = "i";
-                            helping = "ont";
+                            helping = helpingVerb[5];
                             break;
                         default:
                             break;
@@ -547,6 +599,12 @@ namespace French_Conjugations
                     break;
                 default:
                     break;
+            }
+
+            if (isVerbIrreg)
+            {
+                tempRoot = newRoot;
+                append = string.Empty;
             }
             string strRet = string.Concat(tempRoot, append);
             var ret = Tuple.Create(strRet, helping);
@@ -564,6 +622,7 @@ namespace French_Conjugations
         private string ImperfectConj(string infinitive)
         {
             string tempSub = Verb.VerbSubject;                                  // backs up the original verb subject
+            Verb backupVerb = Verb;                                             // back up the original verb
             Verb tempVerb = Verb;                                               // creates clone of the Verb
             tempVerb.VerbSubject = "nous";                                      // changes subject to "nous"
             tempVerb.VerbInput = "nous " + Verb.VerbInfinitive;                 // changes input to "nous " + the input infinitive
@@ -576,7 +635,7 @@ namespace French_Conjugations
             SelectTense = "Imperfect";                                          // resets tense to infinitive
             tempVerb.VerbSubject = tempSub;                                     // resets subject to the orinial subject
             string append;                                                      // create string append
-
+            Verb = backupVerb;
             // sets the append variable to an imperfect verb ending
             switch (Verb.VerbSubject.ToLower())
             {
@@ -605,7 +664,7 @@ namespace French_Conjugations
                     append = "";
                     break;
             }
-
+            
             string ret = string.Concat(tempRoot, append);   // concatenates the root and the ending
             Verb.VerbSubject = tempSub;                     // resets the subject to the original one
             return ret;                                     // return result
@@ -683,7 +742,7 @@ namespace French_Conjugations
 
         private string ConditionalConj(string infinitive)
         {
-            //msgShow();
+            
             string append;                                                      // create string append
 
             // sets the append variable to a conditional verb ending
@@ -732,7 +791,7 @@ namespace French_Conjugations
         }
 
         /// <summary>
-        /// If a feature is not yet fully implemented, use this as a band-aid to cover
+        /// If a feature is not yet fully implemented, use this as a band-aid to cover.
         /// </summary>
         /// <remarks>
         /// Use as sparingly as possible

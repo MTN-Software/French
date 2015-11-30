@@ -15,8 +15,13 @@ using Windows.UI.Xaml.Controls;
 
 namespace French_Conjugations
 {
+    /// <summary>
+    /// The Verb View Model
+    /// </summary>
     public class VerbViewModel : ObservableObject
     {
+        //TODO: Refactor
+
         #region Construction
         /// <summary>
         /// Constructs the default instance of the view model
@@ -58,8 +63,10 @@ namespace French_Conjugations
         TenseViewModel _currentTense;
         string _selectedTense;
         List<string> _EtreHelpingVerbs;
-        private readonly NavigationHelper navigationHelper;
+        private readonly NavigationHelper navigationHelper;     // why is this even here?
         Irregular _irregular;
+
+        // Note to self: would using lists instead of primitive arrays be cleaner?
 
         // verbs that use etre in the passe compose
         string[] _etreInPC = {"devenir", "revenir", "monter", "rester", "sortir", "passer", "venir", 
@@ -87,7 +94,7 @@ namespace French_Conjugations
         string[] _avoir = { "ai", "as", "a", "avons", "avez", "ont" };
 
         // etre conjugations
-        string etre = "être";
+        string etre = "être";   // never used, why is it here? Also, I don't recall if there is any reason why it is not declared constant
         string[] _etre = { "suis", "es", "est", "sommes", "êtes", "sont"};
 
         #endregion
@@ -133,6 +140,7 @@ namespace French_Conjugations
                 catch (Exception ex)
                 {
                     //Verb.VerbInfinitive = ex.Message;
+                    
                     RaisePropertyChanged("VerbInfinitive");
                 }
             }
@@ -162,6 +170,7 @@ namespace French_Conjugations
             {
                 try
                 {
+                    // Shouldn't this be in the getter? why compute this when you set the string?
                     // Conjugation Logic
                     string root = Verb.VerbInfinitive.Substring(0, Verb.VerbInfinitive.Length - 2);
                     string helping = string.Empty;
@@ -171,7 +180,7 @@ namespace French_Conjugations
                     switch (SelectTense)
                     {
                         case "Present":
-                            append = PresentConj(Verb.VerbSubject.ToLower());
+                            PresentConj(ref append);
                             break;
                         case "Passé composé":
                             replaceInf = PasseConj(root).Item1;
@@ -181,20 +190,20 @@ namespace French_Conjugations
                             replaceInf = ImperfectConj(Verb.VerbEnding.ToLower());
                             break;
                         case "Futur Proche":
-                            helping = ProcheConj(append);
+                            ProcheConj(ref helping);
                             root = Verb.VerbInfinitive;
                             append = string.Empty;
                             break;
                         case "Futur Simple":
-                            append = FuturSimpleConj(append);
+                            FuturSimpleConj(ref append);   
                             carryOutVerb = string.Concat(Verb.VerbSubject, " ", Verb.VerbInfinitive, append);
                             break;
                         case "Conditional":
-                            append = ConditionalConj(append);
+                            ConditionalConj(ref append);
                             carryOutVerb = string.Concat(Verb.VerbSubject, " ", Verb.VerbInfinitive, append);
                             break;
                         default:
-                            append = PresentConj(append);
+                            PresentConj(ref append);
                             break;
                     }
 
@@ -244,7 +253,7 @@ namespace French_Conjugations
                 {
                     Verb.VerbInput = value;
                     RaisePropertyChanged("VerbInput");
-                    //QuickConjugate(); // Obsolete
+                    //QuickConjugate();
                 }
             }
         }
@@ -303,7 +312,8 @@ namespace French_Conjugations
         /// Quickly conjugates as user inputs string, worked well when only using one tense.
         /// MTN French Conjugations will not be implemented in future updates
         /// </summary>
-        [Deprecated("French Conjugator will no longer use this method because it breaks the UX", DeprecationType.Deprecate, 100859904)]
+        /// <obsolete/>
+        [Deprecated("French Conjugator will no longer use this method because it breaks the UX", DeprecationType.Remove, 100859904)]
         private void QuickConjugate()
         {
             VerbInfinitive = _verb.VerbInfinitive.ToLower();
@@ -324,7 +334,7 @@ namespace French_Conjugations
         /// </summary>
         /// <param name="append"></param>
         /// <returns></returns>
-        private string PresentConj(string append)
+        private void PresentConj(ref string append)
         {
             switch (Verb.VerbEnding)
             {
@@ -414,8 +424,6 @@ namespace French_Conjugations
                 default:
                     break;
             }
-
-            return append;
         }
 
         /// <summary>
@@ -436,18 +444,19 @@ namespace French_Conjugations
 
             for(int _index = 0; _index < _etreInPC.Length; _index++)
             {
-                isEtreIrreg = (input == _etreInPC[_index]) ? true : false;
-                if (isEtreIrreg)
+                if (input == _etreInPC[_index])
                 {
+                    isEtreIrreg = true;
                     break;
                 }
+
             }
 
             for (int _index = 0; _index < _irregInPC.Length; _index++)
             {
-                isVerbIrreg = (input == _irregInPC[_index]) ? true : false;
-                if (isVerbIrreg)
+                if (input == _irregInPC[_index])
                 {
+                    isVerbIrreg = true;
                     newRoot = _irregPCConj[_index];
                     break;
                 }
@@ -455,7 +464,7 @@ namespace French_Conjugations
 
             string[] helpingVerb = isEtreIrreg ? _etre : _avoir;
             Verb backupVerb = Verb;                                             // backs up the original verb
-            string tempSub = Verb.VerbSubject;                                  // backs up the original verb subject
+            string tempSub = Verb.VerbSubject;                                  // backs up the original verb subject (doesn't work w/o this, don't know why)
             Verb tempVerb = Verb;                                               // creates clone of the Verb
             tempVerb.VerbSubject = "je";                                        // changes subject to "je"
             tempVerb.VerbInput = "je " + Verb.VerbInfinitive;                   // changes input to "je " + the input infinitive
@@ -477,7 +486,7 @@ namespace French_Conjugations
                     tempRoot = tempInf.Substring(0, tempInf.LastIndexOf("is"));       // extracts root of conjugated verb
                     break;
                 default:
-                    tempRoot = "err";
+                    tempRoot = "err";                                                   // short for error? this should never happen
                     break;
             }
             
@@ -487,7 +496,7 @@ namespace French_Conjugations
             switch (Verb.VerbEnding)
             {
                 case "er":
-                    // Damn nested switch statements!
+                    // Damn nested switch statements! // Fix this
                     switch (Verb.VerbSubject.ToLower())
                     {
                         case "je":
@@ -528,74 +537,64 @@ namespace French_Conjugations
                     }
                     break;
                 case "re":
-                    // Foiled again by these nested switch statements!
+                    // Foiled again by these nested switch statements! // Fix this.
                     switch (Verb.VerbSubject.ToLower())
                     {
                         case "je":
-                            append = "u";
                             helping = helpingVerb[0];
                             break;
                         case "tu":
-                            append = "u";
                             helping = helpingVerb[1];
                             break;
                         case "il":
                         case "elle":
                         case "on":
-                            append = "u";
                             helping = helpingVerb[2];
                             break;
                         case "nous":
-                            append = "u";
                             helping = helpingVerb[3];
                             break;
                         case "vous":
-                            append = "u";
                             helping = helpingVerb[4];
                             break;
                         case "ils":
                         case "elles":
-                            append = "u";
                             helping = helpingVerb[5];
                             break;
                         default:
                             break;
                     }
+                    append = "u";
                     break;
                 case "ir":
-                    // Okay, this is going to come back to bite me in the ass later if I don't fix this...
+                    // Okay, this is going to come back to bite me in the ass later if I don't fix this... // So fix it.
                     switch (Verb.VerbSubject.ToLower())
                     {
                         case "je":
-                            append = "i";
                             helping = helpingVerb[0];
                             break;
                         case "tu":
-                            append = "i";
                             helping = helpingVerb[1];
                             break;
                         case "il":
                         case "elle":
                         case "on":
-                            append = "i";
                             helping = helpingVerb[2];
                             break;
                         case "nous":
-                            append = "i";
                             helping = helpingVerb[3];
                             break;
                         case "vous":
-                            append = "i";
                             helping = helpingVerb[4];
                             break;
                         case "ils":
                         case "elles":
-                            append = "i";
                             helping = helpingVerb[5];
                             break;
                         default:
                             break;
                     }
+                    append = "i";
                     break;
                 default:
                     break;
@@ -615,7 +614,8 @@ namespace French_Conjugations
         /// Conjugates the input to match the imperfect past form
         /// </summary>
         /// <remarks>
-        /// Has some bugs that could use fixing
+        /// Has some bugs that could use fixing.
+        /// Guess you could say this method is... Imperfect
         /// </remarks>
         /// <param name="append"> </param>
         /// <returns></returns>
@@ -670,45 +670,45 @@ namespace French_Conjugations
             return ret;                                     // return result
         }
 
+
+
         /// <summary>
         /// Injects the helper verb for futur proche verbs
         /// </summary>
-        /// <param name="infinitive"></param>
-        /// <returns></returns>
-        private string ProcheConj(string infinitive)
+        /// <param name="helper"></param>
+        /// <returns>what to append</returns>
+        private void ProcheConj(ref string helper)
         {
-            string append;
             switch (Verb.VerbSubject.ToLower())
             {
                 case "je":
-                    append = "vais";
+                    helper = "vais";
                     break;
                 case "tu":
-                    append = "vas";
+                    helper = "vas";
                     break;
                 case "il":
                 case "elle":
                 case "on":
-                    append = "va";
+                    helper = "va";
                     break;
                 case "nous":
-                    append = "allons";
+                    helper = "allons";
                     break;
                 case "vous":
-                    append = "allez";
+                    helper = "allez";
                     break;
                 case "ils":
                 case "elles":
-                    append = "vont";
+                    helper = "vont";
                     break;
                 default:
-                    append = "";
+                    helper = "";
                     break;
             }
-            return append;
         }
 
-        private string FuturSimpleConj(string append)
+        private void FuturSimpleConj(ref string append)
         {
             //msgShow();
             switch (Verb.VerbSubject.ToLower())
@@ -737,13 +737,11 @@ namespace French_Conjugations
                 default:
                     break;
             }
-                    return append;
+            //return append;
         }
 
-        private string ConditionalConj(string infinitive)
+        private void ConditionalConj(ref string append)
         {
-            
-            string append;                                                      // create string append
 
             // sets the append variable to a conditional verb ending
             switch (Verb.VerbSubject.ToLower())
@@ -774,7 +772,7 @@ namespace French_Conjugations
                     break;
             }
 
-            return append;
+            //return append;
         }
 
         /// <summary>
@@ -816,32 +814,16 @@ namespace French_Conjugations
 
         #region Commands
         #region Execute
-        void UpdateVerbSubjectExecute()
-        {
-            VerbSubject = string.Format("{0}", _verb.VerbSubject);
-        }
+        void UpdateVerbSubjectExecute() => VerbSubject = string.Format("{0}", _verb.VerbSubject);
 
         // This might not work
-        void UpdateVerbInfinitiveExecute()
-        {
-            VerbInfinitive = string.Format("{0}", _verb.VerbInfinitive);
-        }
+        void UpdateVerbInfinitiveExecute() => VerbInfinitive = string.Format("{0}", _verb.VerbInfinitive);
 
-        void UpdateVerbInputExecute()
-        {
-            VerbInput = string.Format("{0}", _verb.VerbInput);
-        }
+        void UpdateVerbInputExecute() => VerbInput = string.Format("{0}", _verb.VerbInput);
 
-        void UpdateVerbEndingExecute()
-        {
-            VerbEnding = string.Format("{0}", _verb.VerbEnding);
-        }
+        void UpdateVerbEndingExecute() => VerbEnding = string.Format("{0}", _verb.VerbEnding);
 
-        void UpdateVerbFinalFormExecute()
-        {
-            VerbFinalForm = string.Format("{0}", _verb.VerbFinalForm);
-        }
-
+        void UpdateVerbFinalFormExecute() => VerbFinalForm = string.Format("{0}", _verb.VerbFinalForm);
 
         /// <summary>
         /// Conjugate the verb
@@ -856,52 +838,27 @@ namespace French_Conjugations
             UpdateVerbFinalFormExecute();
         }
 
-        void UpdateSelectedTenseExecute()
-        {
-            SelectedTense = _currentTense;
-        }
+        void UpdateSelectedTenseExecute() => SelectedTense = _currentTense;
 
         #endregion
         #region CanExecute
-        bool CanUpdateVerbSubjectExecute()
-        {
-            return true;
-        }
+        //Whats the point of having all of these methods if all they do is return true?
 
-        bool CanUpdateVerbInfinitiveExecute()
-        {
-            return true;
-        }
-        
-        bool CanUpdateVerbInputExecute()
-        {
-            return true;
-        }
+        bool CanUpdateVerbSubjectExecute() => true;
 
-        bool CanUpdateVerbEndingExecute()
-        {
-            return true;
-        }
+        bool CanUpdateVerbInfinitiveExecute() => true;
 
-        bool CanUpdateVerbFinalFormExecute()
-        {
-            return true;
-        }
+        bool CanUpdateVerbInputExecute() => true;
 
-        bool CanUpdateVerbTenseExecute()
-        {
-            return true;
-        }
+        bool CanUpdateVerbEndingExecute() => true;
 
-        bool CanConjugateVerbExecute()
-        {
-            return true;
-        }
+        bool CanUpdateVerbFinalFormExecute() => true;
 
-        bool CanUpdateSelectedTenseExecute()
-        {
-            return true;
-        }
+        bool CanUpdateVerbTenseExecute() => true;
+
+        bool CanConjugateVerbExecute() => true;
+
+        bool CanUpdateSelectedTenseExecute() => true;
         #endregion
         #region ICommands
         public ICommand UpdateVerbSubject { get { return new RelayCommand(UpdateVerbSubjectExecute, CanUpdateVerbSubjectExecute); } }

@@ -22,7 +22,6 @@
     </Page.BottomAppBar>
     <Grid>
         <Grid.RowDefinitions>
-            
             <RowDefinition Height="13"/>
             <RowDefinition Height="13"/>
             <RowDefinition Height="56"/>

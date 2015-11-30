@@ -7,7 +7,7 @@
 
     For more information on package manifest files, see http://go.microsoft.com/fwlink/?LinkID=241727
   -->
-  <Identity Name="54132MTNSoftware.FrenchConjugationsBETA" Publisher="CN=18B5C38D-15AB-4A96-8550-558630DAFC8A" Version="1.1.0.2" ProcessorArchitecture="neutral" />
+  <Identity Name="54132MTNSoftware.FrenchConjugationsBETA" Publisher="CN=18B5C38D-15AB-4A96-8550-558630DAFC8A" Version="1.1.0.5" ProcessorArchitecture="neutral" />
   <mp:PhoneIdentity PhoneProductId="21713419-da25-4716-958a-bdf63ad1e99c" PhonePublisherId="00000000-0000-0000-0000-000000000000" />
   <Properties>
     <DisplayName>French Conjugations BETA</DisplayName>
@@ -23,7 +23,7 @@
   </Resources>
   <Applications>
     <Application Id="App" Executable="French Conjugations.WindowsPhone.exe" EntryPoint="French_Conjugations.WindowsPhone.App">
-      <m3:VisualElements DisplayName="French Conjugations BETA" Square150x150Logo="Assets\Logo.png" Square44x44Logo="Assets\SmallLogo.png" Description="Now backed using MTN VerbSense!  This is a beta version of the current &quot;French Conjugator&quot; app.  Because of the current overhaul, there may be some errors so please don't hesitate to send suggestions or bug reports.  Purchasing the paid version helps support us and allows us to develop new features and software quicker. To send bug reports or feature suggestions use the email: thomas@mtnsoftware.net" ForegroundText="light" BackgroundColor="transparent">
+      <m3:VisualElements DisplayName="French Conjugations BETA" Square150x150Logo="Assets\Logo.png" Square44x44Logo="Assets\SmallLogo.png" Description="Now backed using MTN VerbSense!  This is a beta version of the current &quot;French Conjugator&quot; app.  Because of the current overhaul, there may be some errors so please don't hesitate to send suggestions or bug reports.  Purchasing the paid version helps support us and allows us to develop new features and software quicker." ForegroundText="light" BackgroundColor="transparent">
         <m3:DefaultTile Wide310x150Logo="Assets\WideLogo.png" Square71x71Logo="Assets\Square71x71Logo.png"></m3:DefaultTile>
         <m3:SplashScreen Image="Assets\SplashScreen.png" />
         <m3:InitialRotationPreference>
@@ -41,12 +41,12 @@
     <build:Item Name="SharedGUID" Value="0b476402-f7e8-4dc6-8146-275f72131019" />
     <build:Item Name="CodeSharingProject" Value="248F659F-DAC5-46E8-AC09-60EC9FC95053" />
     <build:Item Name="TargetFrameworkMoniker" Value="WindowsPhoneApp,Version=v8.1" />
-    <build:Item Name="VisualStudio" Version="12.0" />
-    <build:Item Name="VisualStudioEdition" Value="Microsoft Visual Studio Ultimate 2013" />
-    <build:Item Name="OperatingSystem" Version="10.0.10049.0 (fbl_impressive.150325-1700)" />
-    <build:Item Name="Microsoft.Build.AppxPackage.dll" Version="12.0.31101.0" />
+    <build:Item Name="VisualStudio" Version="14.0" />
+    <build:Item Name="VisualStudioEdition" Value="Microsoft Visual Studio Enterprise 2015" />
+    <build:Item Name="OperatingSystem" Version="10.0.10240.16384 (th1.150709-1700)" />
+    <build:Item Name="Microsoft.Build.AppxPackage.dll" Version="14.0.23315.0" />
     <build:Item Name="ProjectGUID" Value="{77201770-284A-453A-9EB4-9C2817AC72B4}" />
-    <build:Item Name="Microsoft.Windows.UI.Xaml.Build.Tasks.dll" Version="12.0.30501.0" />
-    <build:Item Name="MakePri.exe" Version="6.3.9600.17298 (winblue.141024-1500)" />
+    <build:Item Name="Microsoft.Windows.UI.Xaml.81.Build.Tasks.dll" Version="14.0.22705.1" />
+    <build:Item Name="MakePri.exe" Version="6.3.9600.17336 (winblue.150226-1500)" />
   </build:Metadata>
 </Package>

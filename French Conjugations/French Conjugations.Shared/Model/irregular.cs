@@ -10,7 +10,7 @@ namespace French_Conjugations
     public class Irregular
     {
         #region Members
-        string[] _irregVerbs = 
+        string[] _irregVerbs =
         {
             "aller", "appeller",
             "avoir", "conduire", "courir", "dire", 
@@ -29,6 +29,7 @@ namespace French_Conjugations
             "surprendre", "suivre", "tenir", 
             "venir", "vivre", "voir", "vouloir"
         };
+
         #endregion
 
         #region Properties
@@ -40,6 +41,11 @@ namespace French_Conjugations
         public string[] getIrregularVerbs
         {
             get { return _irregVerbs; }
+        }
+
+        public List<string> IrregularVerbs
+        {
+            get { return new List<string>(getIrregularVerbs); }
         }
         #endregion
     }
